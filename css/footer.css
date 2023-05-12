@@ -1,0 +1,537 @@
+/* FOOTER */
+
+html body {
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+  }
+
+footer {
+    padding-bottom: 0;
+}
+
+footer #block-quisommesnous.lazy-bg-loaded {
+    background: url(/themes/fvt/images/qui-sommes-nous.jpg) no-repeat center center;
+    background-size: auto;
+    background-size: cover;
+}
+
+footer #block-quisommesnous {
+    margin-bottom: 0;
+}
+
+footer #block-quisommesnous {
+    padding: 50px 0;
+  }
+
+.container {
+    max-width: 1120px;
+}
+
+.container {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer #block-quisommesnous .head {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+footer #block-quisommesnous .head .logo {
+    background: url(/sites/velodyssee/themes/velodyssee/logo.svg);
+    background-size: auto;
+    width: 209px;
+    height: 65px;
+    background-size: cover;
+}
+
+footer #block-quisommesnous .head .logo {
+    display: inline-block;
+}
+
+footer #block-quisommesnous .head .link-share {
+    position: absolute;
+    right: 0;
+    top: 17px;
+}
+
+.link-share a {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: type_iconsregular ;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    /* font-size: 16px; */
+    color: #000;
+    position: relative;
+    font-size: 20px;
+}
+
+a {
+    /* color: #007c74; */
+    text-decoration: none;
+}
+
+.link-share a.instagram::before {
+    content: "c";
+}
+.link-share a {
+
+    font-family: type_iconsregular;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    /* font-size: 16px; */
+    color: #000;
+    font-size: 20px;
+}
+
+.link-share a {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: type_iconsregular;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    /* font-size: 16px; */
+    color: #000;
+    position: relative;
+    font-size: 20px;
+}
+
+a {
+    /* color: #007c74; */
+    text-decoration: none;
+}
+
+.link-share a.youtube::before {
+    content: "y";
+}
+
+.link-share a {
+    font-family: type_iconsregular;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    /* font-size: 16px; */
+    color: #000;
+    font-size: 20px;
+}
+
+.link-share a {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: type_iconsregular;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    /* font-size: 16px; */
+    color: #000;
+    position: relative;
+    font-size: 20px;
+}
+
+a {
+    /* color: #007c74; */
+    text-decoration: none;
+}
+
+.link-share a.facebook::before {
+    content: "f";
+}
+
+.link-share a {
+    font-family: type_iconsregular;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    /* font-size: 16px; */
+    color: #000;
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.d-md-block {
+    display: block !important;
+}
+
+.col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+[class*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer #block-quisommesnous h3 {
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.d-md-block {
+    display: block !important;
+}
+
+.col-md-7 {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}
+
+[class*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer #block-quisommesnous p {
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.col-md-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+[class*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer #block-quisommesnous .bouton{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.bouton.bouton-blanc{
+    color: #007c74;
+    background: #fff;
+}
+
+.bouton .full{
+    display: block;
+    text-align: center;
+}
+
+.boutton{
+    cursor: pointer;
+}
+
+.boutton{
+    padding: 10px 15px;
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    font-size: .875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* color: #fff;
+    background: #231f20; */
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+[class*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer #block-quisommesnous .bouton{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.bouton.bouton-couleur-1{
+    background: #007c74;
+}
+
+.bouton.full {
+    display: block;
+    text-align: center;
+}
+
+.bouton{
+    cursor: pointer;
+}
+
+.bouton{
+    padding: 10px 15px;
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    font-size: .875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    /* background: #231f20; */
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+
+}
+
+.container {
+    max-width: 1120px;
+}
+
+.container {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+[class*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+[class*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+[class*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+
+footer .wrapper-block-accueilvelo {
+    margin: 0;
+}
+
+.wrapper-block-accueilvelo {
+    /* margin-top: 20px; */
+    background: #f4f4f4;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.wrapper-block-accueilvelo .block-accueil-velo {
+    text-align: left;
+}
+
+.d-md-block {
+    display: block !important;
+}
+
+.col-md-1 {
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+}
+
+[class*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.wrapper-block-accueilvelo .block-accueil-velo h2 {
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.wrapper-block-accueilvelo .block-accueil-velo p {
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 500;
+    font-size: .875rem;
+    color: #585858;
+    margin-bottom: 15px;
+}
+
+.wrapper-block-accueilvelo .block-accueil-velo .lien {
+    padding-top: 10px;
+}
+
+.col-md-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+.bouton.bouton-border-noir{
+    background: 0 0;
+    color: #231f20;
+    border: 2px solid #231f20;
+}
+
+.bouton.full{
+    display: block;
+    text-align: center;
+}
+
+.bouton{
+    cursor: pointer;
+}
+
+.bouton{
+    /* display: inline-block; */
+    padding: 10px 15px;
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    font-size: .875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* color: #fff;
+    background: #231f20; */
+    position: relative;
+    border-radius: 5px;
+    /* border: none; */
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+  }
+
+  .wrapper-block-accueilvelo .block-accueil-velo .lien {
+    padding-top: 10px;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.bouton.bouton-noir{
+    background: #231f20;
+    color: #fff;
+}
+
+footer .wrapper-menu-footer {
+    position: relative;
+}
+
+footer .wrapper-menu-footer {
+    background: #231f20;
+    padding-bottom: 10px;
+
+}
+
+footer .wrapper-menu-footer nav {
+    height: 60px;
+    line-height: 60px;
+}
+
+  footer .wrapper-menu-footer nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer .wrapper-menu-footer nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer .wrapper-menu-footer nav ul li {
+    margin: 0;
+      margin-right: 0px;
+    padding: 0;
+    list-style: none;
+}
+
+footer .wrapper-menu-footer nav ul li a {
+    color: #fff;
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 500;
+    font-size: .8125rem;
+}
+
+footer .wrapper-menu-footer .realisation {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0,-50%);
+}
+
+footer .wrapper-menu-footer nav ul li a {
+    color: #fff;
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 500;
+    font-size: .8125rem;
+}
+
+
+
+
+
+
+
+
+
+
+
