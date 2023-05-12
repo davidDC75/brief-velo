@@ -26,28 +26,49 @@ let gpx = './js/trace-gpx.xml';
 new L.GPX(gpx, {
         async: true,
         gpx_options: {
-            joinTrackSegments: false
+            joinTrackSegments: false,
+            clickable: false,
+            parseElements: ['track', 'route', 'waypoint']
         },
         polyline_options: { // Couleur et épaisseur de la ligne des tracés
             color: '#F59C00',
             opacity: 0.75,
-            weight: 3,
+            weight: 4,
             lineCap: 'round'
         },
         marker_options: {
             shadowUrl: '',
             startIcon: new L.divIcon({
-                html: '<div class="map-marker"></div>'            
+                html: '<div class="map-marker"></div>'
             }),
             endIcon: new L.divIcon({
-                html: '<div class="map-marker"></div>'            
+                html: '<div class="map-marker"></div>'
+            }),
+            wptIcons: new L.divIcon({
+                html: '<div class="waypoint"></div>'
             })
-         
+
         }
 
     }).on('loaded', (e) => {
         map.fitBounds(e.target.getBounds());
     }).on('addpoint', (e) => {
-        console.log('Added '+e.point_type+' point: '+e.point);
+        // console.log(e);
     })
     .addTo(map);
+
+function onClick(e) {
+    console.log('onClick');
+    console.log(e);
+    console.log(e.latlng);
+
+}
+
+// function onMouseOver(e) {
+//     console.log('onMouseOver');
+//     console.log(e);
+// }
+
+map.on('click',onClick);
+
+// map.on('mouseover',onMouseOver);
