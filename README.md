@@ -22,8 +22,12 @@ Pour l'itinéraire, vous réalisez :
 
 N'oubliez pas la version mobile (400px).
 Si vous avez le temps, vous pouvez vous réaliser des fonctionnalités supplémentaires.
-@Apprenant
+
 Vos ressources :
 * Librairie JS pour afficher une carte : https://leafletjs.com/
 * Librairie JS pour afficher un itinéraire depuis un fichier GPX : https://github.com/mpetazzoni/leaflet-gpx
 * Les 2 sites d'exemple, charte graphique, logo & visuels dans le brief
+* Site web d'exemple : https://www.lavelodyssee.com/ et https://www.lavelomaritime.fr/
+* Tracé du trajet au format gpx : https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/file/xml/69e1794f-c950-4e82-bab1-15c511be92e0.xml
+* Page wikipedia de l'euroVelo 5 : https://fr.wikipedia.org/wiki/EuroVelo_5
+
