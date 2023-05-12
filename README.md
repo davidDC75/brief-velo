@@ -20,7 +20,7 @@ Pour l'itinéraire, vous réalisez :
 * Partie droite : fond de carte + boutons de zoom / dézoom, affichage de l'itinéraire et des étapes, survol de chaque étape avec couleur différente + infobulle (ville de départ / arrivée)
 * Partie gauche : de base, on affiche la liste des étapes. Quand on clique sur une étape à droite, zoom sur l'étape et affichage du détail de l'étape à gauche avec : ville de départ et ville d'arrivée, longueur de l'étape, durée de l'étape, visuel de l'étape, description de l'étape, téléchargement du fichier GPX de l'étape. Idéalement 2 liens "Etape suivante" et "Etape précédente"
 
-N'oubliez pas la version mobile.
+N'oubliez pas la version mobile (400px).
 Si vous avez le temps, vous pouvez vous réaliser des fonctionnalités supplémentaires.
 @Apprenant
 Vos ressources :
