@@ -1,7 +1,7 @@
 body #PedalezSelonVosEnvies .VosEnvies {
   background: #fff;
   padding: 10px 15px;
-  margin: 10px;
+  margin: 10px 2px;
   border-radius: 5px;
   font-family: "Mukta Mahee", sans-serif;
   font-weight: 600;
@@ -24,7 +24,7 @@ body #PedalezSelonVosEnvies .VosEnvies {
   display: inline-block;
   width: 100%;
   padding: 10px 15px;
-  margin: 10px;
+  margin: 10px 2px;
   font-family: Poppins, sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
