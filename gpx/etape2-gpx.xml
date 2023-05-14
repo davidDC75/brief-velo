@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="waymarkedtrails.org" version="1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+    <metadata>
+        <name>EuroVelo 5 - Via Romea Francigena - partie France 1</name>
+        <copyright author="OpenStreetMap and Contributors">
+            <license>https://www.openstreetmap.org/copyright</license>
+        </copyright>
+        <link href="https://cycling.waymarkedtrails.org/api/v1/details/relation/5245117/geometry/gpx">
+            <text>Waymarked Trails</text>
+        </link>
+        <time>2022-01-23T20:03:34.984553</time>
+    </metadata>
+    <trk>
+        <trkseg>
+            <trkpt lat="50.86834032991455" lon="1.873679845764005"/>
+            <trkpt lat="50.85230721306366" lon="1.974084510093346"/>
+        </trkseg>
+    </trk>
+</gpx>

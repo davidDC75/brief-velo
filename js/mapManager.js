@@ -5,7 +5,7 @@ let circleOpacity = 1;
 
 let map = L.map('map').setView([50.237, 2.758], 8);
 
-let circlesTbl = new Array();
+// let circlesTbl = new Array();
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -53,7 +53,7 @@ new L.GPX(gpx, {
     }).on('loaded', (e) => {
         map.fitBounds(e.target.getBounds());
     }).on('addpoint', (e) => {
-        // console.log(e);
+        console.log(e);
     })
     .addTo(map);
 
@@ -61,7 +61,6 @@ function onClick(e) {
     console.log('onClick');
     console.log(e);
     console.log(e.latlng);
-
 }
 
 // function onMouseOver(e) {
