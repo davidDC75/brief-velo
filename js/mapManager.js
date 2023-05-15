@@ -63,11 +63,13 @@ function drawMap(etapes) {
         // On met les flags à jour
         isFirst = (i == 0)
         isLast = (i == etapes.length - 1)
+        // On affiche l'étape sur la carte
         etape.gpx = new L.GPX(urlStrapi + etape.attributes.gpx.data[0].attributes.url, {
             async: true,
             marker_options: {
                 shadowUrl: '',
                 shadowSize: [0,0],
+                // On utilise des classes avec des div plutôt que des images
                 startIcon: new L.divIcon({
                     html: (isFirst)?'<div class="start-map-marker"></div>':'<div class="map-marker"></div>'
                 }),
@@ -89,7 +91,8 @@ function drawMap(etapes) {
                 e.target.setStyle({
                     color: '#07756d'
                 })
-                // On itinialise les flags
+                // On itinialise les flags à false pour éviter le mouseover sur le tracé
+                // Car une étape a été sélectionnée
                 mouseoverToggle = false
                 mouseoutToggle = false
                 // Si une track était déjà cliqué, on remet sa couleur à l'origine
@@ -98,8 +101,6 @@ function drawMap(etapes) {
                 }
                 // On stocke la track sélectionné afin de pouvoir la récupèrer avec un autre clique
                 lastTrackClicked = e.target
-                // On prépare les textes correspondant à l'étape
-                //populateEtape(etape);
             }).on('mouseover mousemove', function (e) {
                 // Si on passe la souris sur le tracé, on change la couleur en vert
                 if (mouseoverToggle == true) {
@@ -123,6 +124,7 @@ function drawMap(etapes) {
                     })
                 }
             });
+        // On crée le html de la liste des étape pour l'étape correspondante
         populateListeEtape(etape,i);
         i++; // On incrémente le compteur
     }
@@ -146,6 +148,7 @@ function drawMap(etapes) {
 }
 
 
+// Converti une distance en km et arrondi à un chiffre après la virgule
 function calculateDistance(distance) {
     distance=distance/1000;
     return distance.toFixed(1);
