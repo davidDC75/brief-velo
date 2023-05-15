@@ -119,9 +119,18 @@ footer .menu-footer nav > ul li{
 }
 
 
-.link-share a.instagram::before {
-    content: "i";
+.logo_reseau_instagram{
+    width: 30px;
 }
+
+.logo_reseau_youtube{
+    width: 50px;
+}
+
+.logo_reseau_facebook{
+    width: 30px;
+}
+
 .link-share a {
 
     font-family: type_iconsregular;
@@ -153,9 +162,6 @@ a {
     text-decoration: none;
 }
 
-.link-share a.youtube::before {
-    content: "y";
-}
 
 .link-share a {
     font-family: type_iconsregular;
@@ -187,9 +193,6 @@ a {
     text-decoration: none;
 }
 
-.link-share a.facebook::before {
-    content: "f";
-}
 
 .link-share a {
     font-family: type_iconsregular;
@@ -533,16 +536,16 @@ footer .wrapper-menu-footer nav {
   footer .wrapper-menu-footer nav ul {
     margin-left: 10%;
     padding: 0;
+    
 }
 
 footer .wrapper-menu-footer nav ul li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 footer .wrapper-menu-footer nav ul li {
-    margin: 0;
-      margin-right: 0px;
+
     padding: 0;
     list-style: none;
 }
@@ -569,7 +572,15 @@ footer .wrapper-menu-footer nav ul li a {
 }
 
 
-
+footer .wrapper-menu-footer .realisation span {
+    color: #fff;
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 500;
+    font-size: .8125rem;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
 
 
 
