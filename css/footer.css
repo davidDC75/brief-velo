@@ -15,18 +15,30 @@ footer {
 }
 
 .image_footer{
-    font-size: 40px;
-    
+    display: grid;
+    position: absolute;
+    width: 102%;
+    height: 50%;
     margin-right: 100%;
-    margin-left: 0;
-    margin-bottom: 0%; 
+    margin-left: -10%;
+    /* margin-bottom: 10%;  */
+    /* margin-top: -3%; */
+    
 }
 
-footer #block-quisommesnous.lazy-bg-loaded {
+.logo_footer{
+    width: 60px;
+    display: grid;
+    position: absolute;
+    margin-left: 0%;
+    margin-top: 2%;
+}
+
+/* footer #block-quisommesnous.lazy-bg-loaded {
     background: url(/images/image_footer.jpg) no-repeat center center;
     background-size: auto;
     background-size: cover;
-}
+} */
 
 footer #block-quisommesnous {
     margin-bottom: 0;
@@ -91,10 +103,11 @@ footer #block-quisommesnous .head .link-share {
 a {
     color: black;
     text-decoration: none;
+    
 }
 
 footer .menu-footer nav > ul > li > a{
-    font-family: ;
+    line-height: 40px;
     font-weight: 600;
     font-size: 1rem;
     position: relative;
@@ -107,7 +120,7 @@ footer .menu-footer nav > ul li{
 
 
 .link-share a.instagram::before {
-    content: "c";
+    content: "i";
 }
 .link-share a {
 
@@ -390,11 +403,12 @@ footer #block-quisommesnous .bouton{
     padding-right: 15px;
 }
 
-
-
-
 footer .wrapper-block-accueilvelo {
-    margin: 0;
+    margin-right: -0.6%;
+    margin-left: -1%;
+    margin-bottom: -1%;
+    padding: 1.5%;
+
 }
 
 .wrapper-block-accueilvelo {
@@ -441,7 +455,7 @@ footer .wrapper-block-accueilvelo {
     font-weight: 500;
     font-size: .875rem;
     color: #585858;
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 .wrapper-block-accueilvelo .block-accueil-velo .lien {
@@ -500,6 +514,9 @@ footer .wrapper-block-accueilvelo {
 
 footer .wrapper-menu-footer {
     position: relative;
+    margin-left: -10%;
+    margin-right: -0.6%;
+    margin-bottom: -10%;
 }
 
 footer .wrapper-menu-footer {
@@ -514,7 +531,7 @@ footer .wrapper-menu-footer nav {
 }
 
   footer .wrapper-menu-footer nav ul {
-    margin: 0;
+    margin-left: 10%;
     padding: 0;
 }
 
