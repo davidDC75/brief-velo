@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+    <link rel="stylesheet" href="./css/itineraire.css">
+    <title>EuroVélo - Itinéraire</title>
+</head>
+<body>
+    <div id="itineraire-container">
+        <div id="etape-container">
+            <div class="etape-menu">
+                <a href="#">ETAPES</a>
+                <a href="#">BOUCLES</a>
+                <a href="#">MON GPS</a>
+            </div>
+            <div class="planifier-itineraire">
+                <p>Planifier un itinéraire sur cette véloroute</p>
+                <select name="etape-depart" id="etape-depart">
+                    <option value="">Etape de départ</option>
+                </select>
+                <select name="etape-arrive" id="etape-arrive">
+                    <option value="">Etape d'arrivée</option>
+                </select>
+            </div>
+            <div id="gpx-container">
+                <a href="./gpx/trace-complet.gpx">Télécharger le .gpx de la vélodyssée</a>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="./js/mapManager.js"></script>
+</body>
+</html>
