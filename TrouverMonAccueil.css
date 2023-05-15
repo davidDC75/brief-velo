@@ -1,5 +1,6 @@
 .Titre {
   display: flex;
+  
 }
 .row {
   display: flex;
@@ -13,18 +14,35 @@ h2:before {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, 0);
-  background-image: url(images/Trouver_Mon_Acceuil/sprite.png);
+  transform: translate(-50%,0);
+  background-image: url(/themes/fvt/images/sprite.png?1627395053578);
   background-position: -168px -18px;
   width: 22px;
   height: 32px;
 }
+h2 {
+  h2 {
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+    font-size: 1.75rem;
+    font-family: Poppins,sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+}
 span {
+  position: absolute;
   z-index: 4;
   top: 50%;
   width: 100%;
   text-align: center;
-  position: absolute;
+  transform: translate(0,-50%);
+  color: #fff;
+  font-family: "Mukta Mahee",sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: uppercase;
 }
 .row .Item {
   position: relative;
@@ -32,11 +50,11 @@ span {
 }
 .row .Item a:before {
   content: "";
-  position: absolute
   display: block;
+  position: absolute;
   width: 100%;
   height: 100%;
   background: #000;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,.4);
   z-index: 2;
 }
