@@ -164,7 +164,7 @@ function populateListeEtape(etape,i) {
     let villeDepart=etape.attributes.ville_depart;
     let villeArrive=etape.attributes.ville_arrive;
     let texte=etape.attributes.texte;
-    texte=texte.substring(0,10)+' [...]';
+    texte=texte.substring(0,100)+' [...]';
     // On crée la liste des étapes une à une
     listeEtape = listeEtape +
     `<div class="etape-container" id="etape-container-${i}">
