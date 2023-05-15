@@ -10,9 +10,11 @@ let mouseoverToggle = true
 let mouseoutToggle = true
 let lastTrackClicked = null
 
-
+// Un tableau contenant toutes les étapes afin d'éviter de refaire appel à strapi
+let tblEtapes=new Array;
 // Pour l'accueil de la partie gauche lorsqu'on arrive sur la page itinéraire
 let containerListeEtape = document.getElementById('container-liste-etape');
+// Le contenu html de la liste des étapes lorsqu'on arrive sur itineraire.html
 let listeEtape = '';
 
 
@@ -56,6 +58,8 @@ function drawMap(etapes) {
     let i = 0;
     // Boucle qui va dessiner les tracers gpx correspondant à chaque étape et préparer les événements
     for (let etape of etapes) {
+        // On stocke l'étape en cours dans le tableau
+        tblEtapes[i]=etape;
         // On met les flags à jour
         isFirst = (i == 0)
         isLast = (i == etapes.length - 1)
@@ -103,8 +107,7 @@ function drawMap(etapes) {
                         color: '#07756d'
                     });
                     // On calcule la distance en km et on arrondi à un chiffre après la virgule
-                    distance=e.target.get_distance()/1000;
-                    distance=distance.toFixed(1);
+                    distance=calculateDistance(e.target.get_distance());
                     // On ouvre une popup qui va afficher des informations sur l'étape
                     L.popup()
                         .setLatLng(e.latlng)
@@ -127,7 +130,7 @@ function drawMap(etapes) {
     // bouton.addEventListener('click', function () {
     //     reset()
     // })
-
+    console.log(tblEtapes);
     // On injecte la liste des étapes dans le container
     containerListeEtape.innerHTML=listeEtape;
     // On remet le compteur à zéro
@@ -143,6 +146,11 @@ function drawMap(etapes) {
 }
 
 
+function calculateDistance(distance) {
+    distance=distance/1000;
+    return distance.toFixed(1);
+}
+
 // Préparation de la liste des étapes
 function populateListeEtape(etape,i) {
     console.log('dans populateListeEtape');
@@ -155,7 +163,7 @@ function populateListeEtape(etape,i) {
     let texte=etape.attributes.texte;
     texte=texte.substring(0,10)+' [...]';
     // On crée la liste des étapes une à une
-    listeEtape = listeEtape + 
+    listeEtape = listeEtape +
     `<div class="etape-container" id="etape-container-${i}">
     <div class="image-etape-container">
         <img src="${image}" class="image-etape">
