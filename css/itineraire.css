@@ -22,7 +22,96 @@ div#left-side-container {
 /* La partie haute à gauche */
 div#partie-haute-container {
     display: flex;
+    flex-flow: column nowrap;
+}
+
+div#partie-haute-container div.etape-menu {
+    display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container {
+    width: 33.3%;
+    text-align: center;
+    padding: 1.5% 0 1.5% 0;
+    border-bottom: 3px solid transparent;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container-selected {
+    border-bottom: 3px solid #007c74;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu {
+    display: block;
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+    color: #585858;
+    padding: 0 9% 0 9%;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-etapes::before {
+    display: inline-block;
+    font-family: 'Material Icons';
+    content: 'timeline';
+    text-transform: none;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-boucles::before {
+    display: inline-block;
+    font-family: 'Material Icons';
+    content: 'replay';
+    text-transform: none;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-gps::before {
+    display: inline-block;
+    font-family: 'Material Icons';
+    content: 'directions';
+    text-transform: none;
+}
+
+div#partie-haute-container div.planifier-itineraire {
+    background-color: #475995;
+}
+
+div#partie-haute-container div.planifier-itineraire p {
+    font-family: 'Poppins';
+    color: white;
+}
+
+div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire select {
+    font-family: 'Poppins';
+    background-color: white;
+    color: black;
+    height: 2.4rem;
+    width: 25%;
+    margin: 1% 0 3% 1%;
+}
+
+div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire span.swap-vert-icon {
+    color: white;
+}
+
+div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire button {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    background-color: #475995;
+    color: white;
+    height: 2.4rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 1% 0 3% 5%;
 }
 
 /* Le container qui contient la liste des étapes */

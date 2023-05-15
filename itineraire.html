@@ -19,18 +19,22 @@
             <!-- Menu du haut -->
             <div id="partie-haute-container">
                 <div class="etape-menu">
-                    <a href="#">ETAPES</a>
-                    <a href="#">BOUCLES</a>
-                    <a href="#">MON GPS</a>
+                    <div class="lien-container lien-container-selected"><a href="#" class="onglet-menu"><span class="onglet-menu-etapes">étapes</span></a></div>
+                    <div class="lien-container"><a href="#" class="onglet-menu"><span class="onglet-menu-boucles">boucles</span></a></div>
+                    <div class="lien-container"><a href="#" class="onglet-menu"><span class="onglet-menu-gps">mon gps</span></a></div>
                 </div>
                 <div class="planifier-itineraire">
                     <p>Planifier un itinéraire sur cette véloroute</p>
-                    <select name="etape-depart" id="etape-depart">
-                        <option value="">Etape de départ</option>
-                    </select>
-                    <select name="etape-arrive" id="etape-arrive">
-                        <option value="">Etape d'arrivée</option>
-                    </select>
+                    <div class="formulaire-itineraire">
+                        <select name="etape-depart" id="etape-depart">
+                            <option value="">Etape de départ</option>
+                        </select>
+                        <span class="swap-vert-icon material-symbols-outlined">swap_vert</span>
+                        <select name="etape-arrive" id="etape-arrive">
+                            <option value="">Etape d'arrivée</option>
+                        </select>
+                        <button>Planifier mon itinéraire</button>
+                    </div>
                 </div>
                 <div id="gpx-container">
                     <a href="./gpx/trace-complet.gpx">Télécharger le .gpx de la vélodyssée</a>

@@ -94,7 +94,7 @@ function drawMap(etapes) {
                 // On stocke la track sélectionné afin de pouvoir la récupèrer avec un autre clique
                 lastTrackClicked = e.target
                 // On prépare les textes correspondant à l'étape
-                populateEtape(etape);
+                //populateEtape(etape);
             }).on('mouseover mousemove', function (e) {
                 // Si on passe la souris sur le tracé, on change la couleur en vert
                 if (mouseoverToggle == true) {
@@ -126,9 +126,19 @@ function drawMap(etapes) {
     // bouton.addEventListener('click', function () {
     //     reset()
     // })
-    
+
     // On injecte la liste des étapes dans le container
     containerListeEtape.innerHTML=listeEtape;
+    // On remet le compteur à zéro
+    i=0;
+    // On gère les événements hover
+    for (etape of etapes) {
+        let div=document.getElementById('etape-container-'+i);
+        div.addEventListener('hover', () => {
+            console.log("test");
+        })
+        i++;
+    }
 }
 
 
