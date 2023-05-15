@@ -1,0 +1,50 @@
+.leaflet-div-icon {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+div#itineraire-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+div#etape-container {
+    margin: 0;
+    padding: 0;
+    width:50vw;
+    height: auto;
+}
+div#map {
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    height: 80vh;
+}
+
+div.map-marker {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 2px solid #F59C00;
+    background-color: white;
+}
+
+div.start-map-marker {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 2px solid #13a000;
+    background-color: white;
+}
+
+div.end-map-marker {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 2px solid #b30303;
+    background-color: white;
+}
+
+div.map-marker:hover {
+    border-color: #2f9f48;
+}

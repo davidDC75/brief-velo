@@ -6,8 +6,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Déclaration variables
-// let mouseoverToggle = true
-// let mouseoutToggle = true
+let mouseoverToggle = true
+let mouseoutToggle = true
 let lastTrackClicked = null
 // let titreEtape = document.getElementById("titreEtape")
 // let texteEtape = document.getElementById("texteEtape")
@@ -32,7 +32,7 @@ fetch( urlStrapi + "/api/etapes?populate=*")
     })
     .then(function (value) {
         etapes = value.data
-        carte(etapes)
+        drawMap(etapes)
         // clicSuivant()
         // clicPrecedent()
     })
@@ -41,14 +41,14 @@ fetch( urlStrapi + "/api/etapes?populate=*")
     });
 
 // Création des tracés et fonctions de clics
-function carte(etapes) {
+function drawMap(etapes) {
     console.log("dans carte");
+    // Flag qui permet de mettre le départ et l'arrivé du tracé complet dans une autre couleur et ataille
     let isFirst = null
     let isLast = null
-    let i = 0
+    // Compteur pour le dessin des étapes
+    let i = 0;
     for (let etape of etapes) {
-        console.log(etape);
-        console.log(urlStrapi+etape.attributes.gpx.data[0].attributes.url);
         isFirst = (i == 0)
         isLast = (i == etapes.length - 1)
         etape.gpx = new L.GPX(urlStrapi + etape.attributes.gpx.data[0].attributes.url, {
@@ -57,21 +57,11 @@ function carte(etapes) {
                 shadowUrl: '',
                 shadowSize: [0,0],
                 startIcon: new L.divIcon({
-                    html: '<div class="map-marker"></div>'
+                    html: (isFirst)?'<div class="start-map-marker"></div>':'<div class="map-marker"></div>'
                 }),
                 endIcon: new L.divIcon({
-                    html: '<div class="map-marker"></div>'
-                }),
-                wptIcons: new L.divIcon({
-                    html: '<div class="waypoint"></div>'
+                    html: (isLast)?'<div class="end-map-marker"></div>':'<div class="map-marker"></div>'
                 })
-            //     startIconUrl: (isFirst) ? "images/carte/start.png" : "images/carte/wpt.png",
-            //     // startIconUrl: 'images/carte/wpt.png',
-            //     iconSize: [16, 16],
-            //     iconAnchor: [8, 8],
-            //     shadowSize: [0, 0],
-            //     endIconUrl: (isLast) ? "images/carte/stop.png" : 'images/carte/wpt.png',
-            //     shadowUrl: 'images/carte/pin-shadow.png',
             },
             etape: etape,
             polyline_options: {
@@ -83,8 +73,9 @@ function carte(etapes) {
         }).addTo(map)
             .on('click', function (e) {
                 map.fitBounds(e.target.getBounds());
+                // Quand on clique sur une étape on met le tracé en vert
                 e.target.setStyle({
-                    color: 'blue'
+                    color: '#07756d'
                 })
                 mouseoverToggle = false
                 mouseoutToggle = false
@@ -92,23 +83,23 @@ function carte(etapes) {
                     lastTrackClicked.setStyle({ color: '#f59c00' })
                 }
                 lastTrackClicked = e.target
-                setArticle(etape)
+                populateArticle(etape)
             }).on('mouseover mousemove', function (e) {
-                // if (mouseoverToggle == true) {
-                //     this.setStyle({
-                //         color: '#00246B'
-                //     }); L.popup()
-                //         .setLatLng(e.latlng)
-                //         .setContent(etape.attributes.name + "<br>" + etape.attributes.distance)
-                //         .openOn(map)
-                // }
+                if (mouseoverToggle == true) {
+                    this.setStyle({
+                        color: '#07756d'
+                    }); L.popup()
+                        .setLatLng(e.latlng)
+                        .setContent(etape.attributes.name + "<br>" + etape.attributes.distance)
+                        .openOn(map)
+                }
             }).on('mouseout', function () {
-                // if (mouseoutToggle == true) {
-                //     map.closePopup();
-                //     this.setStyle({
-                //         color: '#f59c00'
-                //     })
-                // }
+                if (mouseoutToggle == true) {
+                    map.closePopup();
+                    this.setStyle({
+                        color: '#f59c00'
+                    })
+                }
             })
         i++
     }
@@ -119,15 +110,15 @@ function carte(etapes) {
 }
 
 // Modification de la fiche article
-function setArticle(etape) {
-    titreEtape.innerHTML = etape.attributes.name;
-    texteEtape.innerHTML = etape.attributes.texteEtape;
-    distance.innerHTML = etape.attributes.distance;
-    montee.innerHTML = etape.attributes.montee;
-    descente.innerHTML = etape.attributes.descente;
-    image.src = url + etape.attributes.img.data.attributes.url;
-    gpxDownload.href = url + etape.attributes.gpx.data.attributes.url;
-    setButtons()
+function populateArticle(etape) {
+    // titreEtape.innerHTML = etape.attributes.name;
+    // texteEtape.innerHTML = etape.attributes.texteEtape;
+    // distance.innerHTML = etape.attributes.distance;
+    // montee.innerHTML = etape.attributes.montee;
+    // descente.innerHTML = etape.attributes.descente;
+    // image.src = url + etape.attributes.img.data.attributes.url;
+    // gpxDownload.href = url + etape.attributes.gpx.data[0].attributes.url;
+    setButtons();
 }
 
 // Retour au tracé complet
@@ -225,7 +216,7 @@ function previousTrack() {
 function trackChange(x) {
     map.fitBounds(x.gpx.getBounds());
     x.gpx.setStyle({
-        color: 'blue'
+        color: '#07756d'
     })
     mouseoverToggle = false
     mouseoutToggle = false
