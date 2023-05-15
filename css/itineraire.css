@@ -8,12 +8,91 @@ div#itineraire-container {
     flex-flow: row nowrap;
 }
 
-div#etape-container {
+/* A partir d'ici on défini les règles pour l'affichage de la liste des étapes sur la gauche */
+div#left-side-container {
     margin: 0;
     padding: 0;
     width:50vw;
+    height: 80vh;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+}
+
+/* La partie haute à gauche */
+div#partie-haute-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* Le container qui contient la liste des étapes */
+div#container-liste-etape {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* Le container pour une seule étape */
+div.etape-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+/* Le container de l'image */
+div.image-etape-container {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+}
+
+img.image-etape {
+    width: 100%;
     height: auto;
 }
+
+span.distance-etape {
+    font-family: 'Poppins';
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    padding: 4% 6% 4% 0;
+}
+
+/* Le container qui contient le titre, la ville de départ et d'arrivé et le texte */
+div.etape-content-container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+}
+
+div.etape-content-container h2 {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    color: white;
+    background-color: #f59c00;
+    padding: 1.5% 0 1.5% 3%;
+}
+
+div.etape-content-container span {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    color: black;
+}
+
+div.etape-content-container p {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    color: black;
+}
+
+
+/* Le div contenant la map */
 div#map {
     margin: 0;
     padding: 0;
@@ -21,6 +100,7 @@ div#map {
     height: 80vh;
 }
 
+/* Les style des markers de la map */
 div.map-marker {
     width: 7px;
     height: 7px;
