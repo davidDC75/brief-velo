@@ -236,12 +236,15 @@ div.etape-content-container p {
     padding: 1% 0 2% 2%;
 }
 
+/* Règle concernant les hover sur les container de chaque étape */
 div#container-liste-etape div.etape-container:hover {
     background-color: black;
 }
 
 div#container-liste-etape div.etape-container:hover div.image-etape-container img.image-etape {
+    width: 100%;
     filter: blur(5px);
+    transform: scale(1.5);
 }
 
 div#container-liste-etape div.etape-container:hover div.etape-content-container span {
