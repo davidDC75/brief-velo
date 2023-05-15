@@ -85,6 +85,7 @@ function drawMap(etapes) {
                 e.target.setStyle({
                     color: '#07756d'
                 })
+                // On itinialise les flags
                 mouseoverToggle = false
                 mouseoutToggle = false
                 // Si une track était déjà cliqué, on remet sa couleur à l'origine
@@ -160,7 +161,7 @@ function populateListeEtape(etape,i) {
         <img src="${image}" class="image-etape">
         <span class="distance-etape">${distance} km</span>
     </div>
-    <div class="etape-content-container"">
+    <div class="etape-content-container">
         <h2>${titre}</h2>
         <span>${villeDepart} &gt; ${villeArrive}</span>
         <p>${texte}</p>

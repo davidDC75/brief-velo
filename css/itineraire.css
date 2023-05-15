@@ -13,7 +13,7 @@ div#left-side-container {
     margin: 0;
     padding: 0;
     width:50vw;
-    height: 80vh;
+    height: calc(100vh - 130px);
     display: flex;
     flex-flow: column nowrap;
     overflow: auto;
@@ -39,39 +39,59 @@ div#partie-haute-container div.etape-menu div.lien-container {
     border-bottom: 3px solid transparent;
 }
 
-div#partie-haute-container div.etape-menu div.lien-container-selected {
-    border-bottom: 3px solid #007c74;
-}
-
 div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu {
     display: block;
     font-family: 'Poppins';
     font-size: 0.8rem;
+    font-weight: 800;
     color: #585858;
     padding: 0 9% 0 9%;
     text-transform: uppercase;
     text-decoration: none;
 }
 
+div#partie-haute-container div.etape-menu div.lien-container-selected {
+    border-bottom: 3px solid #007c74;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu-selected {
+    color: #007c74;
+}
+
 div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-etapes::before {
     display: inline-block;
-    font-family: 'Material Icons';
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
     content: 'timeline';
     text-transform: none;
+    position: relative;
+    top: 5px;
 }
 
 div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-boucles::before {
     display: inline-block;
-    font-family: 'Material Icons';
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
     content: 'replay';
     text-transform: none;
+    position: relative;
+    top: 5px;
 }
 
 div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-gps::before {
     display: inline-block;
-    font-family: 'Material Icons';
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
     content: 'directions';
     text-transform: none;
+    position: relative;
+    top: 5px;
 }
 
 div#partie-haute-container div.planifier-itineraire {
@@ -79,6 +99,7 @@ div#partie-haute-container div.planifier-itineraire {
 }
 
 div#partie-haute-container div.planifier-itineraire p {
+    margin: 2% 0 2% 3%;
     font-family: 'Poppins';
     color: white;
 }
@@ -94,24 +115,56 @@ div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire se
     font-family: 'Poppins';
     background-color: white;
     color: black;
+    border-radius: 10px;
     height: 2.4rem;
     width: 25%;
     margin: 1% 0 3% 1%;
+    padding-left: 10px 0 10px 15px;
 }
 
 div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire span.swap-vert-icon {
+    padding: 0;
+    margin: 0;
     color: white;
 }
 
 div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire button {
     font-family: 'Poppins';
+    font-weight: 700;
     text-transform: uppercase;
-    background-color: #475995;
+    background-color: #586eb8;
     color: white;
     height: 2.4rem;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 10px;
     margin: 1% 0 3% 5%;
+    padding: 0 2% 0 2%;
+}
+
+div#partie-haute-container div#gpx-container {
+    margin: 3% 0 3% 0;
+    text-align: center;
+}
+
+div#partie-haute-container div#gpx-container a {
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: #007c74;
+}
+
+div#partie-haute-container div#gpx-container a::before {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-style: normal;
+    content: 'file_download';
+    text-transform: none;
+    position: relative;
+    top: 5px;
 }
 
 /* Le container qui contient la liste des étapes */
@@ -162,7 +215,7 @@ div.etape-content-container {
 
 div.etape-content-container h2 {
     font-family: 'Poppins';
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: white;
     background-color: #f59c00;
     padding: 1.5% 0 1.5% 3%;
@@ -170,23 +223,41 @@ div.etape-content-container h2 {
 
 div.etape-content-container span {
     font-family: 'Poppins';
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
     color: black;
+    padding: 2% 0 2% 2%;
 }
 
 div.etape-content-container p {
     font-family: 'Poppins';
     font-size: 1rem;
-    color: black;
+    color: #585858;
+    padding: 1% 0 2% 2%;
 }
 
+div#container-liste-etape div.etape-container:hover {
+    background-color: black;
+}
+
+div#container-liste-etape div.etape-container:hover div.image-etape-container img.image-etape {
+    filter: blur(5px);
+}
+
+div#container-liste-etape div.etape-container:hover div.etape-content-container span {
+    color: white;
+}
+
+div#container-liste-etape div.etape-container:hover div.etape-content-container p {
+    color: white;
+}
 
 /* Le div contenant la map */
 div#map {
     margin: 0;
     padding: 0;
     width: 50vw;
-    height: 80vh;
+    height: calc(100vh - 130px);
 }
 
 /* Les style des markers de la map */
