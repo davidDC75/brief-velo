@@ -17,6 +17,26 @@
     font-weight: 500;
 }
 
+.box{
+    height: 300px; 
+    
+}
+
+img{
+    height: 300px;
+    width: 300px;
+}
+
+.carte_la_douceur_de_atlantique{
+   
+    display: grid;
+    margin-left: 10%;
+    margin-top: 4%;
+    grid-template-columns: 300px 300px 300px;
+    width: 100px;
+    gap: 40px;
+}
+
 
 
 
