@@ -9,6 +9,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let mouseoverToggle = true
 let mouseoutToggle = true
 let lastTrackClicked = null
+
+
+// Pour l'accueil de la partie gauche lorsqu'on arrive sur la page itinéraire
+let containerListeEtape = document.getElementById('container-liste-etape');
+let listeEtape = '';
+
+
 // let titreEtape = document.getElementById("titreEtape")
 // let texteEtape = document.getElementById("texteEtape")
 // let montee = document.getElementById("montee")
@@ -42,13 +49,14 @@ fetch( urlStrapi + "/api/etapes?populate=*")
 
 // Création des tracés et fonctions de clics
 function drawMap(etapes) {
-    console.log("dans carte");
     // Flag qui permet de mettre le départ et l'arrivé du tracé complet dans une autre couleur et ataille
     let isFirst = null
     let isLast = null
     // Compteur pour le dessin des étapes
     let i = 0;
+    // Boucle qui va dessiner les tracers gpx correspondant à chaque étape et préparer les événements
     for (let etape of etapes) {
+        // On met les flags à jour
         isFirst = (i == 0)
         isLast = (i == etapes.length - 1)
         etape.gpx = new L.GPX(urlStrapi + etape.attributes.gpx.data[0].attributes.url, {
@@ -79,46 +87,86 @@ function drawMap(etapes) {
                 })
                 mouseoverToggle = false
                 mouseoutToggle = false
+                // Si une track était déjà cliqué, on remet sa couleur à l'origine
                 if (lastTrackClicked != null) {
                     lastTrackClicked.setStyle({ color: '#f59c00' })
                 }
+                // On stocke la track sélectionné afin de pouvoir la récupèrer avec un autre clique
                 lastTrackClicked = e.target
-                populateArticle(etape)
+                // On prépare les textes correspondant à l'étape
+                //populateEtape(etape);
             }).on('mouseover mousemove', function (e) {
+                // Si on passe la souris sur le tracé, on change la couleur en vert
                 if (mouseoverToggle == true) {
                     this.setStyle({
                         color: '#07756d'
-                    }); L.popup()
+                    });
+                    // On calcule la distance en km et on arrondi à un chiffre après la virgule
+                    distance=e.target.get_distance()/1000;
+                    distance=distance.toFixed(1);
+                    // On ouvre une popup qui va afficher des informations sur l'étape
+                    L.popup()
                         .setLatLng(e.latlng)
-                        .setContent(etape.attributes.name + "<br>" + etape.attributes.distance)
+                        .setContent(etape.attributes.ville_depart + " -> " + etape.attributes.ville_arrive +"<br>" + distance + "km")
                         .openOn(map)
                 }
             }).on('mouseout', function () {
+                // quand on sort du tracé, on remet la couleur en orange
                 if (mouseoutToggle == true) {
                     map.closePopup();
                     this.setStyle({
                         color: '#f59c00'
                     })
                 }
-            })
-        i++
+            });
+        populateListeEtape(etape,i);
+        i++; // On incrémente le compteur
     }
     // const bouton = document.getElementById("bouton");
     // bouton.addEventListener('click', function () {
     //     reset()
     // })
+
+    // On injecte la liste des étapes dans le container
+    containerListeEtape.innerHTML=listeEtape;
+    // On remet le compteur à zéro
+    i=0;
+    // On gère les événements hover
+    for (etape of etapes) {
+        let div=document.getElementById('etape-container-'+i);
+        div.addEventListener('hover', () => {
+            console.log("test");
+        })
+        i++;
+    }
 }
 
-// Modification de la fiche article
-function populateArticle(etape) {
-    // titreEtape.innerHTML = etape.attributes.name;
-    // texteEtape.innerHTML = etape.attributes.texteEtape;
-    // distance.innerHTML = etape.attributes.distance;
-    // montee.innerHTML = etape.attributes.montee;
-    // descente.innerHTML = etape.attributes.descente;
-    // image.src = url + etape.attributes.img.data.attributes.url;
-    // gpxDownload.href = url + etape.attributes.gpx.data[0].attributes.url;
-    setButtons();
+
+// Préparation de la liste des étapes
+function populateListeEtape(etape,i) {
+    console.log('dans populateListeEtape');
+    // containerListeEtape;
+    let image=urlStrapi+etape.attributes.image.data.attributes.url;
+    let distance=etape.attributes.distance;
+    let titre=etape.attributes.titre_texte;
+    let villeDepart=etape.attributes.ville_depart;
+    let villeArrive=etape.attributes.ville_arrive;
+    let texte=etape.attributes.texte;
+    texte=texte.substring(0,10)+' [...]';
+    // On crée la liste des étapes une à une
+    listeEtape = listeEtape + 
+    `<div class="etape-container" id="etape-container-${i}">
+    <div class="image-etape-container">
+        <img src="${image}" class="image-etape">
+        <span class="distance-etape">${distance} km</span>
+    </div>
+    <div class="etape-content-container"">
+        <h2>${titre}</h2>
+        <span>${villeDepart} &gt; ${villeArrive}</span>
+        <p>${texte}</p>
+    </div>
+</div>`;
+
 }
 
 // Retour au tracé complet

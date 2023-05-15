@@ -164,7 +164,6 @@ a {
 
 
 .link-share a {
-    font-family: type_iconsregular;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
@@ -177,7 +176,6 @@ a {
 .link-share a {
     display: inline-block;
     margin-right: 10px;
-    font-family: type_iconsregular;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
@@ -195,7 +193,6 @@ a {
 
 
 .link-share a {
-    font-family: type_iconsregular;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
@@ -231,7 +228,7 @@ a {
 }
 
 footer #block-quisommesnous h3 {
-    font-family: Poppins,sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
     margin: 0;
@@ -292,7 +289,7 @@ footer #block-quisommesnous .bouton{
 
 .boutton{
     padding: 10px 15px;
-    font-family: Poppins,sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: .875rem;
     text-transform: uppercase;
@@ -337,7 +334,7 @@ footer #block-quisommesnous .bouton{
 
 .bouton{
     padding: 10px 15px;
-    font-family: Poppins,sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: .875rem;
     text-transform: uppercase;
@@ -406,6 +403,41 @@ footer #block-quisommesnous .bouton{
     padding-right: 15px;
 }
 
+/* .menu-footer nav > ul > li.has-child > h3 a {
+    display: block;
+    position: relative;
+  }
+
+  footer .menu-footer nav > ul > li.has-child > h3 a::after {
+    content: "arrow_drop_down";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    font-family: "Material Icons";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga";
+  } */
+
+  footer .menu-footer nav > ul > li > ul li a {
+    line-height: 30px;
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 500;
+    font-size: .9375rem;
+    color: #585858;
+    
+  }
+
 footer .wrapper-block-accueilvelo {
     margin-right: -0.6%;
     margin-left: -1%;
@@ -447,7 +479,7 @@ footer .wrapper-block-accueilvelo {
 }
 
 .wrapper-block-accueilvelo .block-accueil-velo h2 {
-    font-family: Poppins,sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1rem;
     margin: 0;
@@ -488,7 +520,7 @@ footer .wrapper-block-accueilvelo {
 .bouton{
     /* display: inline-block; */
     padding: 10px 15px;
-    font-family: Poppins,sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: .875rem;
     text-transform: uppercase;
