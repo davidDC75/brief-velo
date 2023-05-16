@@ -5,9 +5,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-// Déclaration variables
+
+// Ces deux flags vont permettre de gérer le changement de couleur d'un tracé de la carte
+// Lorsqu'on passe dessus
+// Il est désactivé quand on click sur un tracé ou une étape de la liste
 let mouseoverToggle = true
 let mouseoutToggle = true
+// Permet de stocké le dernier tracé sélectionné
 let lastTrackClicked = null
 
 // Partie haute contenant les liens du container de gauche
@@ -16,14 +20,11 @@ let containerTopleft = document.getElementById('partie-haute-container');
 let containerListeEtape = document.getElementById('container-liste-etape');
 // Le contenu html de la liste des étapes lorsqu'on arrive sur itineraire.html
 let listeEtape = '';
-
-// let image = document.getElementById("img")
+// L'url de strapi
 let urlStrapi = 'http://90.110.218.245:5003'
+// La liste des étapes récupéré dans strapi
 let etapes = null
-// let etapeSuivante = document.getElementById("etapeSuivante")
-// let etapePrecedente = document.getElementById("etapePrecedente")
-let next = null
-let previous = null
+
 
 // Chargement des données
 fetch(urlStrapi+"/api/etapes?populate=*")
@@ -44,7 +45,7 @@ fetch(urlStrapi+"/api/etapes?populate=*")
 
 // Création des tracés et fonctions de clics
 function drawMap(etapes) {
-    // Flag qui permet de mettre le départ et l'arrivé du tracé complet dans une autre couleur et ataille
+    // Flag qui permet de mettre le départ et l'arrivé du tracé complet dans une autre couleur et taille
     let isFirst = null
     let isLast = null
     // Compteur pour le dessin des étapes
@@ -52,8 +53,8 @@ function drawMap(etapes) {
     // Boucle qui va dessiner les tracers gpx correspondant à chaque étape et préparer les événements
     for (let etape of etapes) {
         // On met les flags à jour
-        isFirst = (i == 0)
-        isLast = (i == etapes.length - 1)
+        isFirst=(i==0)
+        isLast=(i==etapes.length-1)
         // On affiche l'étape sur la carte
         etape.gpx = new L.GPX(urlStrapi + etape.attributes.gpx.data[0].attributes.url, {
             async: true,
@@ -93,7 +94,7 @@ function drawMap(etapes) {
                 }
                 // On stocke la track sélectionné afin de pouvoir la récupèrer après un autre clique
                 lastTrackClicked = e.target
-                // On appelle afficheEtape, si on click sur le trajet d'une étape
+                // On appelle afficheEtape pour affiché l'étape
                 afficheEtape(etape);
             }).on('mouseover mousemove', function (e) {
                 // Si on passe la souris sur le tracé, on change la couleur en vert
@@ -179,27 +180,19 @@ function retourneListeEtape() {
 }
 
 function afficheEtape(etape) {
-    // Click venant de la partie gauche
-    if (typeof etape=="number") { // Click depuis la liste à gauche, on récupère un index de tableau
-        villeDepart = etapes[etape].attributes.ville_depart;
-        villeArrive = etapes[etape].attributes.ville_arrive;
-        texte = etapes[etape].attributes.texte;
-        titre_texte = etapes[etape].attributes.titre_texte;
-        image = etapes[etape].attributes.image.data.attributes.url;
-        fichierGpx = etapes[etape].attributes.gpx.data[0].attributes.url;
-        distance = etapes[etape].attributes.distance;
-        // Ici on gère l'affichage du parcours sur la carte
-        AfficheEtapeSurMap(etapes[etape]);
+    // Si etape est un number, alors le click vient de la liste de gauche
+    // Sinon le click vient de la carte
+    flag=(typeof etape=="number");
+    villeDepart=flag?etapes[etape].attributes.ville_depart:etape.attributes.ville_depart;
+    villeArrive=flag?etapes[etape].attributes.ville_arrive:etape.attributes.ville_arrive;
+    texte=flag?etapes[etape].attributes.texte:etape.attributes.texte;
+    titre_texte=flag?etapes[etape].attributes.titre_texte:etape.attributes.titre_texte;
+    image=flag?etapes[etape].attributes.image.data.attributes.url:etape.attributes.image.data.attributes.url;
+    fichierGpx=flag?etapes[etape].attributes.gpx.data[0].attributes.url:etape.attributes.gpx.data[0].attributes.url;
+    distance=flag?etapes[etape].attributes.distance:etape.attributes.distance;
 
-    } else { // Click venant de la carte, on récupère donc un objet
-        villeDepart = etape.attributes.ville_depart;
-        villeArrive = etape.attributes.ville_arrive;
-        texte = etape.attributes.texte;
-        titre_texte = etape.attributes.titre_texte;
-        image = etape.attributes.image.data.attributes.url;
-        fichierGpx = etape.attributes.gpx.data[0].attributes.url;
-        distance = etape.attributes.distance;
-    }
+    // Si le click vient de la liste de gauche, on affiche l'étape sur la map
+    if (flag) AfficheEtapeSurMap(etapes[etape]);
 
     containerTopleft.innerHTML=`
     <div class="top-etape-flex-column">
@@ -295,7 +288,7 @@ function nextTrack() {
     for (let etape of etapes) {
         if (etape.attributes.etapeId == lastTrackClicked.options.etape.attributes.etapeId) {
             next = etapes[i + 1]
-            trackChange(next)
+            AfficheEtapeSurMap(next)
             return;
         }
         i++
@@ -307,7 +300,7 @@ function previousTrack() {
     for (let etape of etapes) {
         if (etape.attributes.etapeId == lastTrackClicked.options.etape.attributes.etapeId) {
             previous = etapes[i - 1]
-            trackChange(previous)
+            AfficheEtapeSurMap(previous)
             return;
         }
         i++
