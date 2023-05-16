@@ -216,13 +216,22 @@ function afficheEtape(etape) {
                 <h2>${titre_texte}</h2>
             </div>
             <div class="etape-detail-flex-row">
-                ${distance} Km &lt;-&gt; 0 h 00 min
+                <span class="etape-distance">
+                    ${distance} Km
+                </span>
+                <span class="etape-temps">
+                 0 h 00 min
+                 </span>
+                 <span class="etape-difficulte">
+                 </span>
             </div>
             <div class="etape-detail-image">
                 <img src="${urlStrapi}${image}">
             </div>
-            <div class="etape-detail-dep-arr">
-                ${villeDepart} &lt;- -&gt; ${villeArrive}
+            <div class="etape-detail-dep-arr-flex">
+                <div class="etape-detail-ville-depart">${villeDepart}</div>
+                <div><span class="material-symbols-outlined">swap_horiz</span></div>
+                <div class="etape-detail-ville-arrive">${villeArrive}</div>
             </div>
             <div class="etape-detail-description">
                 <p>${texte}</p>

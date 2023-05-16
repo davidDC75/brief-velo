@@ -41,7 +41,7 @@ div#partie-haute-container div.etape-menu div.lien-container {
 
 div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu {
     display: block;
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     font-size: 0.8rem;
     font-weight: 800;
     color: #585858;
@@ -67,7 +67,7 @@ div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.
     content: 'timeline';
     text-transform: none;
     position: relative;
-    top: 5px;
+    vertical-align: middle;
 }
 
 div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-boucles::before {
@@ -79,7 +79,7 @@ div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.
     content: 'replay';
     text-transform: none;
     position: relative;
-    top: 5px;
+    vertical-align: middle;
 }
 
 div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-gps::before {
@@ -91,7 +91,7 @@ div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.
     content: 'directions';
     text-transform: none;
     position: relative;
-    top: 5px;
+    vertical-align: middle;
 }
 
 div#partie-haute-container div.planifier-itineraire {
@@ -112,7 +112,7 @@ div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire {
 }
 
 div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire select {
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     background-color: white;
     color: black;
     border-radius: 10px;
@@ -129,7 +129,7 @@ div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire sp
 }
 
 div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire button {
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     font-weight: 700;
     text-transform: uppercase;
     background-color: #586eb8;
@@ -147,7 +147,7 @@ div#partie-haute-container div#gpx-container {
 }
 
 div#partie-haute-container div#gpx-container a {
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
@@ -198,7 +198,7 @@ img.image-etape {
 }
 
 span.distance-etape {
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     background-color: white;
     color: black;
     position: absolute;
@@ -215,7 +215,7 @@ div.etape-content-container {
 }
 
 div.etape-content-container h2 {
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     font-size: 0.8rem;
     color: white;
     background-color: #f59c00;
@@ -281,13 +281,13 @@ div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 {
 }
 
 div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column span.etape-desc-trajet {
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     font-size: 1.1rem;
     color: black;
 }
 
 div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column span.etape-desc-veloeuro {
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     font-size: 1.1rem;
     color: #F59C00;
 }
@@ -304,7 +304,7 @@ div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 a {
 }
 
 div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 a span.top-etape-passeport {
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     font-size: 1.1rem;
     font-weight: 700;
     color: #007c74;
@@ -326,7 +326,7 @@ div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 di
 
 div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu {
     display: block;
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     font-size: 0.8rem;
     font-weight: 400;
     color: #585858;
@@ -353,7 +353,7 @@ div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 di
     content: 'format_align_left';
     text-transform: none;
     position: relative;
-    top: 5px;
+    vertical-align: middle;
 }
 
 div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu span.onglet-menu-avis::before {
@@ -365,9 +365,98 @@ div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 di
     content: 'forum';
     text-transform: none;
     position: relative;
-    top: 5px;
+    vertical-align: middle;
 }
 
+/* Ici on commence les styles concernant l'affichage de l'étape en lui même */
+div#container-liste-etape div.etape-detail-container div.etape-detail-top h2 {
+    width: 100%;
+    height: 5vh;
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: white;
+    background-color: #f59c00;
+    text-align: center;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row span.etape-distance::after {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    content: 'settings_ethernet';
+    text-transform: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-image img {
+    width: 100%;
+    height: auto;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background-color: #eee;
+    height: 5vh;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: black;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart::before {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #54b40b;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-arrive {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: black;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-arrive::after {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #ef4136;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-description {
+
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-description p {
+    font-family: 'Frutiger';
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: black;
+    text-align: justify;
+    margin: 1.5vh 2vw 0 2vw;
+}
+
+/*************************************
+**************************************/
 /* Le div contenant la map */
 div#map {
     margin: 0;
