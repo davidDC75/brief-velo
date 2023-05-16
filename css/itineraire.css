@@ -257,6 +257,7 @@ div#container-liste-etape div.etape-container:hover div.etape-content-container 
 }
 
 /* On commence les style pour l'affichage d'une étape */
+/* Première ligne */
 div#partie-haute-container div.top-etape-flex-column {
     display: flex;
     flex-flow: column nowrap;
@@ -266,6 +267,7 @@ div#partie-haute-container div.top-etape-flex-row-1 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: 9vh;
     border-bottom: 1px solid #CCC;
@@ -307,6 +309,63 @@ div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 a s
     font-weight: 700;
     color: #007c74;
     text-transform: uppercase;
+}
+
+/* Deuxième ligne contenant les liens 'description' et 'avis et témoignages' */
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 6vh;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container {
+    width: 50%;
+    text-align: center;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu {
+    display: block;
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #585858;
+    padding: 0 9% 0 9%;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container-selected {
+    border-bottom: 3px solid #007c74;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu-selected {
+    color: #007c74;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu span.onglet-menu-desc::before {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    content: 'format_align_left';
+    text-transform: none;
+    position: relative;
+    top: 5px;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu span.onglet-menu-avis::before {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    content: 'forum';
+    text-transform: none;
+    position: relative;
+    top: 5px;
 }
 
 /* Le div contenant la map */

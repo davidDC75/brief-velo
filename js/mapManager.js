@@ -195,15 +195,15 @@ function afficheEtape(etape) {
                     <span class="etape-desc-trajet">${villeDepart} &gt; ${villeArrive}</span>
                     <span class="etape-desc-veloeuro">Le Véloeuro</span>
                 </div>
-                <a href="#"><span class="top-etape-passeport">PASSEPORT</span></a>
+                <a href="#"><span class="top-etape-passeport">PASSEPORT 🗺️</span></a>
             </div>
         </div>
-        <div class="top-etape-flex-row">
+        <div class="top-etape-flex-row-3">
             <div class="lien-container lien-container-selected">
-                <a href="#" class="onglet-menu onglet-menu-selected"><span class="onglet-menu-etapes">description</span></a>
+                <a href="#" class="onglet-menu onglet-menu-selected"><span class="onglet-menu-desc">description</span></a>
             </div>
             <div class="lien-container">
-                <a href="#" class="onglet-menu"><span class="onglet-menu-boucles">avis et témoignages</span></a>
+                <a href="#" class="onglet-menu"><span class="onglet-menu-avis">avis et témoignages</span></a>
             </div>
         </div>
     </div>
