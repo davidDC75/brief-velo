@@ -98,6 +98,7 @@ span{
     background-color: orange;
     color: white;
     font-weight: bold;
+    font-weight: 600;
     max-width: 70%;
     transform: translate(-50%,0);
     overflow: hidden;
