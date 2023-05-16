@@ -8,6 +8,7 @@
 }
 
 .sous_titre{
+    font-size: 110%;
     text-align: center;
     color: #585858;
     line-height: 1.5em;
@@ -57,17 +58,56 @@ img{
 
 }
 
-/* .texte_des_cartes{
+h3 {
 
-    position: relative;
+    position: absolute;
+    display: grid;
+    margin-top: 24%;
+    margin-left: 4%;
     text-align: center;
     font-family: "Mukta Mahee",sans-serif;
     font-weight: 600;
-    color: #fff;
+    color: white;
     font-size: 1.5rem;
     line-height: 1em;
 
-} */
+}
+
+p {
+    position: absolute;
+    display: grid;
+    margin-top: 27.5%;
+    margin-left: 4%;
+    text-align: center;
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 90%;
+    line-height: 1em;
+}
+
+span{
+    position: absolute;
+    text-decoration: solid;
+    display: inline-block;
+    text-align: center;
+    display: grid;
+    margin-top: 1%;
+    margin-left: 16%;
+    padding: 0.5%;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    max-width: 70%;
+    transform: translate(-50%,0);
+    overflow: hidden;
+    z-index: 6;
+    
+}
+
+div span{
+    display: inline-block;
+}
 
 
 
