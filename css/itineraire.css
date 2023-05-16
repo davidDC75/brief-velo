@@ -455,9 +455,9 @@ div#container-liste-etape div.etape-detail-container {
     position: relative;
 }
 
+/* Le container en bas de la description d'une étape avec les liens */
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed {
-    background-color: #13a000;
-    position: fixed;
+    position: absolute;
     z-index: 1000;
     bottom: 0;
     left: 0;
@@ -465,6 +465,37 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
     height: 10vh;
 }
 
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-link {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    text-align: center;
+    width:100%;
+    height: 3vh;
+    background-color: white;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-link a {
+    display: block;
+    text-align: center;
+    width: 33.3%;
+    font-family: 'Frutiger';
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #07756d;
+    text-decoration: none;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-link a span {
+    position: relative;
+    top: 6px;
+}
+
+/* Le container contenant les boutons précédent et suivant */
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button {
+    background-color: #07756d;
+    width: 100%;
+}
 /*************************************
 **************************************/
 /* Le div contenant la map */

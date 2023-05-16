@@ -137,6 +137,31 @@ function calculateDistance(distance) {
     return distance.toFixed(1);
 }
 
+// Le block du haut de la liste des étapes
+function afficheTopLeftContainer() {
+    containerTopleft.innerHTML=`<div class="etape-menu">
+    <div class="lien-container lien-container-selected"><a href="#" class="onglet-menu onglet-menu-selected"><span class="onglet-menu-etapes">étapes</span></a></div>
+    <div class="lien-container"><a href="#" class="onglet-menu"><span class="onglet-menu-boucles">boucles</span></a></div>
+    <div class="lien-container"><a href="#" class="onglet-menu"><span class="onglet-menu-gps">mon gps</span></a></div>
+</div>
+<div class="planifier-itineraire">
+    <p>Planifier un itinéraire sur cette véloroute</p>
+    <div class="formulaire-itineraire">
+        <select name="etape-depart" id="etape-depart">
+            <option value="">Etape de départ</option>
+        </select>
+        <span class="swap-vert-icon material-symbols-outlined">swap_vert</span>
+        <select name="etape-arrive" id="etape-arrive">
+            <option value="">Etape d'arrivée</option>
+        </select>
+        <button>Planifier mon itinéraire</button>
+    </div>
+</div>
+<div id="gpx-container">
+    <a href="./gpx/trace-complet.gpx">Télécharger le .gpx de la vélodyssée</a>
+</div>`;
+}
+
 // Préparation de la liste des étapes
 function populateListeEtape(etape,i) {
     // containerListeEtape;
@@ -150,16 +175,16 @@ function populateListeEtape(etape,i) {
     // On crée la liste des étapes une à une
     listeEtape = listeEtape +
     `<div class="etape-container" onclick="afficheEtape(${i});" id="etape-container-${i}">
-    <div class="image-etape-container">
-        <img src="${image}" class="image-etape">
-        <span class="distance-etape">${distance} km</span>
-    </div>
-    <div class="etape-content-container">
-        <h2>${titre}</h2>
-        <span>${villeDepart} &gt; ${villeArrive}</span>
-        <p>${texte}</p>
-    </div>
-</div>`;
+        <div class="image-etape-container">
+            <img src="${image}" class="image-etape">
+            <span class="distance-etape">${distance} km</span>
+        </div>
+        <div class="etape-content-container">
+            <h2>${titre}</h2>
+            <span>${villeDepart} &gt; ${villeArrive}</span>
+            <p>${texte}</p>
+        </div>
+    </div>`;
 
 }
 
@@ -245,9 +270,9 @@ function afficheEtape(etape) {
             </div>
             <div class="etape-bottom-block-fixed">
                 <div class="etape-detail-bottom-link">
-                    CARNET DE VOYAGE
-                    TRACE GPX
-                    FICHE PDF
+                    <a href="#"><span class="material-symbols-outlined">favorite_border</span>&nbsp;CARNET DE VOYAGE</a>
+                    <a href="${urlStrapi}${fichierGpx}"><span class="material-symbols-outlined">file_download</span>&nbsp;TRACE GPX</a>
+                    <a href="#"><span class="material-symbols-outlined">print</span>&nbsp;FICHE PDF</a>
                 </div>
                 <div class="etape-detail-bottom-button">
 
@@ -257,30 +282,6 @@ function afficheEtape(etape) {
     `;
     // Le container de la liste des étapes sert aussi de container pour une description d'une étape
     containerListeEtape.innerHTML=etapeHTML;
-}
-
-function afficheTopLeftContainer() {
-    containerTopleft.innerHTML=`<div class="etape-menu">
-    <div class="lien-container lien-container-selected"><a href="#" class="onglet-menu onglet-menu-selected"><span class="onglet-menu-etapes">étapes</span></a></div>
-    <div class="lien-container"><a href="#" class="onglet-menu"><span class="onglet-menu-boucles">boucles</span></a></div>
-    <div class="lien-container"><a href="#" class="onglet-menu"><span class="onglet-menu-gps">mon gps</span></a></div>
-</div>
-<div class="planifier-itineraire">
-    <p>Planifier un itinéraire sur cette véloroute</p>
-    <div class="formulaire-itineraire">
-        <select name="etape-depart" id="etape-depart">
-            <option value="">Etape de départ</option>
-        </select>
-        <span class="swap-vert-icon material-symbols-outlined">swap_vert</span>
-        <select name="etape-arrive" id="etape-arrive">
-            <option value="">Etape d'arrivée</option>
-        </select>
-        <button>Planifier mon itinéraire</button>
-    </div>
-</div>
-<div id="gpx-container">
-    <a href="./gpx/trace-complet.gpx">Télécharger le .gpx de la vélodyssée</a>
-</div>`;
 }
 
 function nextTrack() {
