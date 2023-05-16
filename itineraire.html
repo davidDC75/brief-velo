@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/itineraire.css">
+    <title>EuroVélo - Itinéraire</title>
+</head>
+<body>
+    <!-- container principale avec les infos à gauche et la map à droite -->
+    <div id="itineraire-container">
+        <div id="left-side-container">
+            <!-- Menu du haut -->
+            <div id="partie-haute-container"></div>
+            <!-- Partie basse du côté gauche qui contient la liste des étapes-->
+            <div id="container-liste-etape"></div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="./js/mapManager.js"></script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+.leaflet-div-icon {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+div#itineraire-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* A partir d'ici on défini les règles pour l'affichage de la liste des étapes sur la gauche */
+div#left-side-container {
+    margin: 0;
+    padding: 0;
+    width:50vw;
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+}
+
+/* La partie haute à gauche */
+div#partie-haute-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div#partie-haute-container div.etape-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container {
+    width: 33.3%;
+    text-align: center;
+    padding: 1.5% 0 1.5% 0;
+    border-bottom: 3px solid transparent;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu {
+    display: block;
+    font-family: 'Frutiger';
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #585858;
+    padding: 0 9% 0 9%;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container-selected {
+    border-bottom: 3px solid #007c74;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu-selected {
+    color: #007c74;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-etapes::before {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    content: 'timeline';
+    text-transform: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-boucles::before {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    content: 'replay';
+    text-transform: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu span.onglet-menu-gps::before {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    content: 'directions';
+    text-transform: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+div#partie-haute-container div.planifier-itineraire {
+    background-color: #475995;
+}
+
+div#partie-haute-container div.planifier-itineraire p {
+    margin: 2% 0 2% 3%;
+    font-family: 'Poppins';
+    color: white;
+}
+
+div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire select {
+    font-family: 'Frutiger';
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    height: 2.4rem;
+    width: 25%;
+    margin: 1% 0 3% 1%;
+    padding-left: 10px 0 10px 15px;
+}
+
+div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire span.swap-vert-icon {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire button {
+    font-family: 'Frutiger';
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #586eb8;
+    color: white;
+    height: 2.4rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 1% 0 3% 5%;
+    padding: 0 2% 0 2%;
+}
+
+div#partie-haute-container div#gpx-container {
+    margin: 3% 0 3% 0;
+    text-align: center;
+}
+
+div#partie-haute-container div#gpx-container a {
+    font-family: 'Frutiger';
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: #007c74;
+}
+
+div#partie-haute-container div#gpx-container a::before {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-style: normal;
+    content: 'file_download';
+    text-transform: none;
+    position: relative;
+    top: 5px;
+}
+
+/* Le container qui contient la liste des étapes */
+div#container-liste-etape {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* Le container pour une seule étape */
+div.etape-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+/* Le container de l'image */
+div.image-etape-container {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+}
+
+img.image-etape {
+    width: 100%;
+    height: auto;
+}
+
+span.distance-etape {
+    font-family: 'Frutiger';
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    padding: 4% 6% 4% 0;
+}
+
+/* Le container qui contient le titre, la ville de départ et d'arrivé et le texte */
+div.etape-content-container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+}
+
+div.etape-content-container h2 {
+    font-family: 'Frutiger';
+    font-size: 0.8rem;
+    color: white;
+    background-color: #f59c00;
+    padding: 1.5% 0 1.5% 3%;
+}
+
+div.etape-content-container span {
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: black;
+    padding: 2% 0 2% 2%;
+}
+
+div.etape-content-container p {
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+    color: #585858;
+    padding: 1% 0 2% 2%;
+}
+
+/* Règle concernant les hover sur les container de chaque étape */
+div#container-liste-etape div.etape-container:hover {
+    background-color: black;
+}
+
+div#container-liste-etape div.etape-container:hover div.image-etape-container img.image-etape {
+    width: 100%;
+    filter: blur(5px);
+    transform: scale(1.5);
+}
+
+div#container-liste-etape div.etape-container:hover div.etape-content-container span {
+    color: white;
+}
+
+div#container-liste-etape div.etape-container:hover div.etape-content-container p {
+    color: white;
+}
+
+/* On commence les style pour l'affichage d'une étape */
+/* Première ligne */
+div#partie-haute-container div.top-etape-flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 9vh;
+    border-bottom: 1px solid #CCC;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4%;
+    width: 100%;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column span.etape-desc-trajet {
+    font-family: 'Frutiger';
+    font-size: 1.1rem;
+    color: black;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column span.etape-desc-veloeuro {
+    font-family: 'Frutiger';
+    font-size: 1.1rem;
+    color: #F59C00;
+}
+
+
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 a {
+    text-decoration: none;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 a span.top-etape-passeport {
+    font-family: 'Frutiger';
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #007c74;
+    text-transform: uppercase;
+}
+
+/* Deuxième ligne contenant les liens 'description' et 'avis et témoignages' */
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 6vh;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container {
+    width: 50%;
+    text-align: center;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu {
+    display: block;
+    font-family: 'Frutiger';
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #585858;
+    padding: 0 9% 0 9%;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container-selected {
+    border-bottom: 3px solid #007c74;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu-selected {
+    color: #007c74;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu span.onglet-menu-desc::before {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    content: 'format_align_left';
+    text-transform: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu span.onglet-menu-avis::before {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    content: 'forum';
+    text-transform: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+/* Ici on commence les styles concernant l'affichage de l'étape en lui même */
+div#container-liste-etape div.etape-detail-container div.etape-detail-top h2 {
+    width: 100%;
+    height: 5vh;
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: white;
+    background-color: #f59c00;
+    text-align: center;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row span.etape-distance::after {
+    display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    content: 'settings_ethernet';
+    text-transform: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-image img {
+    width: 100%;
+    height: auto;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background-color: #eee;
+    height: 5vh;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: black;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart::before {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #54b40b;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-arrive {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: black;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-arrive::after {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #ef4136;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-description p {
+    font-family: 'Frutiger';
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: black;
+    text-align: justify;
+    margin: 1.5vh 2vw 13vh 2vw;
+}
+
+div#container-liste-etape div.etape-detail-container {
+    position: relative;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed {
+    background-color: #13a000;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+/*************************************
+**************************************/
+/* Le div contenant la map */
+div#map {
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    height: calc(100vh - 130px);
+}
+
+/* Les style des markers de la map */
+div.map-marker {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 2px solid #F59C00;
+    background-color: white;
+}
+
+div.start-map-marker {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 2px solid #13a000;
+    background-color: white;
+}
+
+div.end-map-marker {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 2px solid #b30303;
+    background-color: white;
+}
+
+div.map-marker:hover {
+    border-color: #2f9f48;
+}
