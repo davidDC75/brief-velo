@@ -182,6 +182,7 @@ div.etape-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
+    cursor: pointer;
 }
 
 /* Le container de l'image */
@@ -253,6 +254,59 @@ div#container-liste-etape div.etape-container:hover div.etape-content-container 
 
 div#container-liste-etape div.etape-container:hover div.etape-content-container p {
     color: white;
+}
+
+/* On commence les style pour l'affichage d'une étape */
+div#partie-haute-container div.top-etape-flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    height: 9vh;
+    border-bottom: 1px solid #CCC;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4%;
+    width: 100%;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column span.etape-desc-trajet {
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+    color: black;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column span.etape-desc-veloeuro {
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+    color: #F59C00;
+}
+
+
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 a {
+    text-decoration: none;
+}
+
+div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 a span.top-etape-passeport {
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #007c74;
+    text-transform: uppercase;
 }
 
 /* Le div contenant la map */
