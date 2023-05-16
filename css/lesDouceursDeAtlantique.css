@@ -23,21 +23,65 @@
 }
 
 img{
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    margin-bottom: 100%;
+}
+
+.image_effet:hover{
+    filter: blur(6px);
+    transform: scale(1);
+    transition: all .2s ease-out;
+    background: linear-gradient(to top,#000,rgba(0,0,0,0) 100%)
 }
 
 .carte_la_douceur_de_atlantique{
-   
+   position: absolute;
     display: grid;
-    margin-left: 24%;
+    margin-left: 17%;
     margin-top: 4%;
-    grid-template-columns: 300px 300px 300px;
-    width: 100px;
-    gap: 40px;
+    margin-bottom: 100%;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px 400px;
+    gap: 30px;
+    row-gap: 30px;
 }
 
+.logo_coeur{
+    position: absolute;
+    width: 13%;
+    height: auto;
+    margin-top: 0.3%;
+    margin-left: 26%;
+
+}
+
+/* .texte_des_cartes{
+
+    position: relative;
+    text-align: center;
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1em;
+
+} */
 
 
+
+
+/* .image_effet{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(to top,#000,rgba(0,0,0,0) 100%);
+    opacity: .2;
+} */
 
 

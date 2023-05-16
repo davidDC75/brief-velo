@@ -77,7 +77,6 @@ footer #block-quisommesnous .head {
 }
 
 footer #block-quisommesnous .head .logo {
-    background: url(/sites/velodyssee/themes/velodyssee/logo.svg);
     background-size: auto;
     width: 209px;
     height: 65px;
@@ -142,8 +141,6 @@ footer .menu-footer nav > ul li{
 }
 
 .link-share a {
-
-    font-family: type_iconsregular;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
@@ -156,7 +153,6 @@ footer .menu-footer nav > ul li{
 .link-share a {
     display: inline-block;
     margin-right: 10px;
-    font-family: type_iconsregular;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
