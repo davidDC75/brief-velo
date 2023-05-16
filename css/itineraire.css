@@ -448,15 +448,16 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-descriptio
     font-weight: 400;
     color: black;
     text-align: justify;
-    margin: 1.5vh 2vw 0 2vw;
+    margin: 1.5vh 2vw 13vh 2vw;
 }
 
 div#container-liste-etape div.etape-detail-container {
     position: relative;
 }
 
-div#container-liste-etape div.etape-detail-container div.etape-detail-bottom-link {
-    position: absolute;
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed {
+    background-color: #13a000;
+    position: fixed;
     z-index: 1000;
     bottom: 0;
     left: 0;
