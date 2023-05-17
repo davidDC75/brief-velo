@@ -14,6 +14,7 @@ let mouseoutToggle=true;
 // Permet de stocké le dernier tracé sélectionné
 let lastTrackClicked=null;
 
+let containerLeftSide=document.getElementById('left-side-container');
 // Partie haute contenant les liens du container de gauche
 let containerTopleft=document.getElementById('partie-haute-container');
 // Pour l'accueil de la partie gauche lorsqu'on arrive sur la page itinéraire
@@ -175,6 +176,9 @@ function populateListeEtape(etape,i) {
     let villeDepart=etape.attributes.ville_depart;
     let villeArrive=etape.attributes.ville_arrive;
     let texte=etape.attributes.texte;
+    let difficulte=etape.attributes.difficulte;
+    difficulte=getDifficulteHTML(difficulte);
+
     texte=texte.substring(0,200)+' [...]';
     // On crée la liste des étapes une à une
     listeEtape = listeEtape +
@@ -185,13 +189,25 @@ function populateListeEtape(etape,i) {
         </div>
         <div class="etape-content-container">
             <h2>${titre}</h2>
-            <span>${villeDepart} &gt; ${villeArrive}</span>
+            ${difficulte}
+            <span class="etape-dep-arr">${villeDepart} &gt; ${villeArrive}</span>
             <p>${texte}</p>
         </div>
     </div>`;
 
 }
 
+function getDifficulteHTML(difficulte) {
+    switch(difficulte) {
+        case 1:
+            return '<div class="difficulte"><span class="difficulte-1">Je débute / En famille&nbsp</span><b class="difficulte-1-circle"></b></div>';
+            break;
+        case 2:
+            return '<div class="difficulte"><span class="difficulte-2">J\'ai l\'habitude&nbsp;</span><b class="difficulte-2-circle"></b></div>';
+            break;
+    }
+    return '<div class="difficulte"><span class="difficulte-3">Je me dépasse&nbsp;</span><b class="difficulte-3-circle"></b></div>';
+}
 // Appelé lorsque l'on clique sur la fléche qui permet de retourner à la liste des étapes
 function retourneListeEtape() {
     afficheTopLeftContainer();
@@ -219,6 +235,7 @@ function afficheEtape(etape) {
     image=flag?etapes[etape].attributes.image.data.attributes.url:etape.attributes.image.data.attributes.url;
     fichierGpx=flag?etapes[etape].attributes.gpx.data[0].attributes.url:etape.attributes.gpx.data[0].attributes.url;
     distance=flag?etapes[etape].attributes.distance:etape.attributes.distance;
+    difficulte=flag?etapes[etape].attributes.difficulte:etape.attributes.difficulte;
     index=flag?etapes[etape].index:etape.index;
     numeroEtape=index+1;
 
@@ -244,6 +261,8 @@ function afficheEtape(etape) {
         etapeSuivante=index+1;
         villeSuivante=etapes[index+1].attributes.ville_arrive;
     }
+
+    difficulte=getDifficulteHTML(difficulte);
 
     containerTopleft.innerHTML=`
     <div class="top-etape-flex-column">
@@ -282,8 +301,7 @@ function afficheEtape(etape) {
                 <span class="etape-temps">
                  &nbsp;0 h 00 min
                  </span>
-                 <span class="etape-difficulte">
-                 </span>
+                 ${difficulte}
             </div>
             <div class="etape-detail-image">
                 <img src="${urlStrapi}${image}">
@@ -303,20 +321,26 @@ function afficheEtape(etape) {
                     <a href="#"><span class="material-symbols-outlined">print</span>&nbsp;FICHE PDF</a>
                 </div>
                 <div class="etape-detail-bottom-button">
-                    <div class="etape-detail-bottom-bouton-precedent" id="bouton-etape-precedente">
-                        <a href="#" onclick="afficheEtape(${etapePrecedente})">
-                            <span>étape précédente</span><br>
-                            depuis ${villePrecedente}
-                        </a>
+                    <div class="container-bouton-precedent" id="bouton-etape-precedente">
+                        <div><a href="#" onclick="afficheEtape(${etapePrecedente})"><span class="material-symbols-outlined">arrow_back</span></a></div>
+                        <div class="etape-detail-bottom-bouton-precedent">
+                            <a href="#" onclick="afficheEtape(${etapePrecedente})">
+                                <span>étape précédente</span><br>
+                                depuis ${villePrecedente}
+                            </a>
+                        </div>
                     </div>
                     <div class="etape-detail-bottom-numero-etape">
                         ${numeroEtape}/${nbEtapes}
                     </div>
-                    <div class="etape-detail-bottom-bouton-suivant" id="bouton-etape-suivante">
-                        <a href="#" onclick="afficheEtape(${etapeSuivante})">
-                            <span>étape suivante</span><br>
-                            vers ${villeSuivante}
-                        </a>
+                    <div class="container-bouton-suivant" id="bouton-etape-suivante">
+                        <div class="etape-detail-bottom-bouton-suivant">
+                            <a href="#" onclick="afficheEtape(${etapeSuivante})">
+                                <span>étape suivante</span><br>
+                                vers ${villeSuivante}
+                            </a>
+                        </div>
+                        <div><a href="#" onclick="afficheEtape(${etapeSuivante})"><span class="material-symbols-outlined">arrow_forward</span></a></div>
                     </div>
                 </div>
             </div>
@@ -341,6 +365,8 @@ function afficheEtape(etape) {
     } else {
         divBoutonSuivant.style.visibility='visible';
     }
+    // On remonte le scrool au début de l'étape
+    containerLeftSide.scroll(0,0);
 }
 
 // Clic des boutons
@@ -371,6 +397,7 @@ function ChangeTrack(indexEtape) {
     lastTrackClicked=etapes[indexEtape].gpx;
 }
 
+// Remet la track en orange. Appelée après un mouseout du container de l'étape correspondante dans la liste de gauche
 function quitteTrack(indexEtape) {
     etapes[indexEtape].gpx.setStyle({ color: '#f59c00'});
 }
