@@ -1,7 +1,7 @@
 /* FOOTER */
 
 html body {
-    font-family: "Frutiger" 45 light;
+    font-family: "Mukta Mahee",sans-serif;
     font-weight: 400;
 }
 
@@ -12,7 +12,7 @@ html body {
 
 footer {
     padding-bottom: 0;
-    margin-bottom: 0%;
+    margin-bottom: 0;
     margin-top: 100%;
     
 }
@@ -20,9 +20,9 @@ footer {
 .image_footer{
     display: grid;
     position: absolute;
-    width: 121%;
-    height: 50%;
-    margin-right: 110%;
+    width: 122%;
+    height: 60%;
+    margin-right: 100%;
     margin-left: -30%;
     margin-bottom: 10%; 
     /* margin-top: -3%; */
@@ -138,6 +138,7 @@ footer .menu-footer nav > ul li{
 }
 
 .logo_reseau_youtube{
+    
     width: 50px;
     height: auto;
 }
@@ -245,6 +246,7 @@ footer #block-quisommesnous h3 {
     font-weight: 600;
     font-size: 1.5rem;
     margin: 0;
+    color: black;
 }
 
 .d-md-block {
@@ -267,6 +269,8 @@ footer #block-quisommesnous p {
     font-family: "Mukta Mahee",sans-serif;
     font-weight: 500;
     font-size: 1rem;
+    padding: 5%;
+    margin-left: -5%;
 }
 
 .col-md-2 {

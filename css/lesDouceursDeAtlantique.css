@@ -25,7 +25,7 @@
     
 }
 
-img{
+.image_des_cartes{
     height: 300px;
     width: 300px;
     border-radius: 10px;
@@ -33,6 +33,7 @@ img{
 }
 
 .image_effet:hover{
+   
     filter: blur(6px);
     transform: scale(1);
     transition: all .2s ease-out;
@@ -62,10 +63,10 @@ img{
 
 }
 
-h3 {
+.titre_des_cartes {
     position: absolute;
     display: grid;
-    margin-top: 24%;
+    margin-top: 25%;
     margin-left: 4%;
     text-align: center;
     font-family: "Mukta Mahee",sans-serif;
@@ -79,7 +80,7 @@ h3 {
 }
 
 
-p {
+.sous_titre_text {
     position: absolute;
     display: grid;
     margin-top: 27.5%;
