@@ -273,7 +273,6 @@ function afficheEtape(etape) {
                     <span class="etape-desc-trajet">${villeDepart} &gt; ${villeArrive}</span>
                     <span class="etape-desc-veloeuro">Le Véloeuro</span>
                 </div>
-                <a href="#"><span class="top-etape-passeport">PASSEPORT 🗺️</span></a>
             </div>
         </div>
         <div class="top-etape-flex-row-3">
@@ -295,11 +294,11 @@ function afficheEtape(etape) {
             </div>
             <div class="etape-detail-flex-row">
                 <span class="etape-distance">
-                    ${distance} Km&nbsp;
+                    ${distance} Km&nbsp;&nbsp;
                 </span>
                 <span class="material-symbols-outlined">settings_ethernet</span>
                 <span class="etape-temps">
-                 &nbsp;0 h 00 min
+                 &nbsp;0 h 00 min&nbsp;
                  </span>
                  ${difficulte}
             </div>
@@ -309,7 +308,7 @@ function afficheEtape(etape) {
             <div class="etape-detail-dep-arr-flex">
                 <div class="etape-detail-ville-depart"><i class="fa-regular fa-circle circle1"></i><span>&nbsp;${villeDepart}</span></div>
                 <div><span class="material-symbols-outlined">swap_horiz</span></div>
-                <div class="etape-detail-ville-arrive"><i class="fa-regular fa-circle circle2"></i>&nbsp;${villeArrive}</span></div>
+                <div class="etape-detail-ville-arrive"><i class="fa-regular fa-circle circle2"></i><span>&nbsp;${villeArrive}</span></div>
             </div>
             <div class="etape-detail-description">
                 <p>${texte}</p>

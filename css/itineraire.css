@@ -41,7 +41,7 @@ div#partie-haute-container div.etape-menu div.lien-container {
 
 div#partie-haute-container div.etape-menu div.lien-container a.onglet-menu {
     display: block;
-    font-family: 'Frutiger';
+    font-family: 'Poppins';
     font-size: 0.8rem;
     font-weight: 800;
     color: #585858;
@@ -113,7 +113,7 @@ div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire {
 }
 
 div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire select {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     background-color: white;
     color: black;
     border-radius: 10px;
@@ -134,7 +134,7 @@ div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire sp
 }
 
 div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire button {
-    font-family: 'Frutiger';
+    font-family: 'Poppins';
     font-weight: 700;
     text-transform: uppercase;
     background-color: #586eb8;
@@ -153,7 +153,7 @@ div#partie-haute-container div#gpx-container {
 }
 
 div#partie-haute-container div#gpx-container a {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
@@ -204,7 +204,7 @@ img.image-etape {
 }
 
 span.distance-etape {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     background-color: white;
     color: black;
     position: absolute;
@@ -221,7 +221,7 @@ div.etape-content-container {
 }
 
 div.etape-content-container h2 {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 0.8rem;
     color: white;
     background-color: #f59c00;
@@ -234,7 +234,7 @@ div.etape-content-container div.difficulte {
 }
 
 span.difficulte-1 {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1rem;
     color: #52BE80;
     padding-left: 2%;
@@ -249,7 +249,7 @@ b.difficulte-1-circle {
 }
 
 span.difficulte-2 {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1rem;
     color: #3498DB;
     padding-left: 2%;
@@ -264,7 +264,7 @@ b.difficulte-2-circle {
 }
 
 span.difficulte-3 {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1rem;
     color: #E74C3C;
     padding-left: 2%;
@@ -279,14 +279,14 @@ b.difficulte-3-circle {
 }
 
 div.etape-content-container span.etape-dep-arr {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1.1rem;
     color: black;
     padding: 1% 0 2% 2%;
 }
 
 div.etape-content-container p {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1.1rem;
     color: #585858;
     padding: 1% 0 2% 2%;
@@ -340,13 +340,14 @@ div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 {
 }
 
 div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column span.etape-desc-trajet {
-    font-family: 'Frutiger';
+    font-family: 'Poppins';
     font-size: 1.1rem;
+    font-weight: 600;
     color: black;
 }
 
 div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div.top-etape-flex-column span.etape-desc-veloeuro {
-    font-family: 'Frutiger';
+    font-family: 'Poppins';
     font-size: 1.1rem;
     color: #F59C00;
 }
@@ -360,14 +361,6 @@ div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 div
 
 div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 a {
     text-decoration: none;
-}
-
-div#partie-haute-container div.top-etape-flex-row-1 div.top-etape-flex-row-2 a span.top-etape-passeport {
-    font-family: 'Frutiger';
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #007c74;
-    text-transform: uppercase;
 }
 
 /* Deuxième ligne contenant les liens 'description' et 'avis et témoignages' */
@@ -385,7 +378,7 @@ div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 di
 
 div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu {
     display: block;
-    font-family: 'Frutiger';
+    font-family: 'Poppins';
     font-size: 0.8rem;
     font-weight: 400;
     color: #585858;
@@ -431,7 +424,7 @@ div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 di
 div#container-liste-etape div.etape-detail-container div.etape-detail-top h2 {
     width: 100%;
     height: 5vh;
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1rem;
     color: white;
     background-color: #f59c00;
@@ -447,21 +440,21 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row {
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row span.etape-distance {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1rem;
     font-weight: 500;
     color: black;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row span.etape-temps {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1rem;
     font-weight: 500;
     color: black;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row div.difficulte {
-    width: 20vw;
+    width: 10vw;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-image img {
@@ -488,7 +481,7 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-fl
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart span {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1rem;
     color: black;
 }
@@ -498,7 +491,7 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-fl
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-arrive span {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1rem;
     color: black;
 }
@@ -508,7 +501,7 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-fl
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-description p {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1.3rem;
     font-weight: 400;
     color: black;
@@ -544,7 +537,7 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
     display: block;
     text-align: center;
     width: 33.3%;
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1.3rem;
     font-weight: 400;
     color: #07756d;
@@ -574,7 +567,7 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-numero-etape {
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 1.1rem;
     font-weight: 400;
     color: white;
@@ -590,7 +583,7 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.container-bouton-suivant {
     display: flex;
     flex-flow: row nowrap;
-    font-family: 'Frutiger';
+    font-family: 'Mukta Mahee';
     font-size: 0.8rem;
     font-weight: 600;
     color: white;
