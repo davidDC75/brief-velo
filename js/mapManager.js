@@ -14,6 +14,7 @@ let mouseoutToggle=true;
 // Permet de stocké le dernier tracé sélectionné
 let lastTrackClicked=null;
 
+let containerLeftSide=document.getElementById('left-side-container');
 // Partie haute contenant les liens du container de gauche
 let containerTopleft=document.getElementById('partie-haute-container');
 // Pour l'accueil de la partie gauche lorsqu'on arrive sur la page itinéraire
@@ -347,6 +348,8 @@ function afficheEtape(etape) {
     } else {
         divBoutonSuivant.style.visibility='visible';
     }
+    // On remonte le scrool au début de l'étape
+    containerLeftSide.scroll(0,0);
 }
 
 // Clic des boutons
@@ -377,6 +380,7 @@ function ChangeTrack(indexEtape) {
     lastTrackClicked=etapes[indexEtape].gpx;
 }
 
+// Remet la track en orange. Appelée après un mouseout du container de l'étape correspondante dans la liste de gauche
 function quitteTrack(indexEtape) {
     etapes[indexEtape].gpx.setStyle({ color: '#f59c00'});
 }

@@ -419,6 +419,7 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-fl
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    align-items: center;
     background-color: #eee;
     height: 5vh;
     position: relative;
@@ -578,4 +579,22 @@ div.end-map-marker {
 
 div.map-marker:hover {
     border-color: #2f9f48;
+}
+
+/*****************************************
+*****************************************/
+/* Partie Responsive */
+@media screen and (max-width: 600px) {
+    div#map {
+        display: none;
+    }
+
+    div#left-side-container {
+        width: 100vw;
+    }
+
+    div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed {
+        width: 100vw;
+    }
+
 }
