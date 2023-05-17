@@ -303,9 +303,9 @@ function afficheEtape(etape) {
                     <a href="#"><span class="material-symbols-outlined">print</span>&nbsp;FICHE PDF</a>
                 </div>
                 <div class="etape-detail-bottom-button">
-                    <div class="container-bouton-precedent">
+                    <div class="container-bouton-precedent" id="bouton-etape-precedente">
                         <div><a href="#" onclick="afficheEtape(${etapePrecedente})"><span class="material-symbols-outlined">arrow_back</span></a></div>
-                        <div class="etape-detail-bottom-bouton-precedent" id="bouton-etape-precedente">
+                        <div class="etape-detail-bottom-bouton-precedent">
                             <a href="#" onclick="afficheEtape(${etapePrecedente})">
                                 <span>étape précédente</span><br>
                                 depuis ${villePrecedente}
@@ -315,8 +315,8 @@ function afficheEtape(etape) {
                     <div class="etape-detail-bottom-numero-etape">
                         ${numeroEtape}/${nbEtapes}
                     </div>
-                    <div class="container-bouton-suivant">
-                        <div class="etape-detail-bottom-bouton-suivant" id="bouton-etape-suivante">
+                    <div class="container-bouton-suivant" id="bouton-etape-suivante">
+                        <div class="etape-detail-bottom-bouton-suivant">
                             <a href="#" onclick="afficheEtape(${etapeSuivante})">
                                 <span>étape suivante</span><br>
                                 vers ${villeSuivante}
