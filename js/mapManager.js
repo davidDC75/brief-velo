@@ -290,7 +290,7 @@ function afficheEtape(etape) {
             <div class="etape-detail-dep-arr-flex">
                 <div class="etape-detail-ville-depart"><i class="fa-regular fa-circle circle1"></i><span>&nbsp;${villeDepart}</span></div>
                 <div><span class="material-symbols-outlined">swap_horiz</span></div>
-                <div class="etape-detail-ville-arrive"><i class="fa-regular fa-circle circle2"></i><span>&nbsp;${villeArrive}</span></div>
+                <div class="etape-detail-ville-arrive"><i class="fa-regular fa-circle circle2"></i>&nbsp;${villeArrive}</span></div>
             </div>
             <div class="etape-detail-description">
                 <p>${texte}</p>
