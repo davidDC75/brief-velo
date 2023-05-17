@@ -526,6 +526,11 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
     color: #fff;
     text-decoration: none;
 }
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-numero-etape {
+    color: #fff;
+}
+
 /*************************************
 **************************************/
 /* Le div contenant la map */

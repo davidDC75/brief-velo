@@ -178,7 +178,7 @@ function populateListeEtape(etape,i) {
     texte=texte.substring(0,100)+' [...]';
     // On crée la liste des étapes une à une
     listeEtape = listeEtape +
-    `<div class="etape-container" onclick="afficheEtape(${i});" id="etape-container-${i}">
+    `<div class="etape-container" onclick="afficheEtape(${i});" onmouseover="ChangeTrack(${i});" id="etape-container-${i}">
         <div class="image-etape-container">
             <img src="${image}" class="image-etape">
             <span class="distance-etape">${distance} km</span>
@@ -341,38 +341,8 @@ function afficheEtape(etape) {
     }
 }
 
-function nextTrack() {
-    let i = 0
-    for (let etape of etapes) {
-        if (etape.attributes.etapeId == lastTrackClicked.options.etape.attributes.etapeId) {
-            next = etapes[i + 1]
-            AfficheEtapeSurMap(next)
-            return;
-        }
-        i++
-    }
-}
-
-function previousTrack() {
-    let i = 0
-    for (let etape of etapes) {
-        if (etape.attributes.etapeId == lastTrackClicked.options.etape.attributes.etapeId) {
-            previous = etapes[i - 1]
-            AfficheEtapeSurMap(previous)
-            return;
-        }
-        i++
-    }
-}
-
 // Clic des boutons
 function AfficheEtapeSurMap(etape) {
-    // On centre la carte sur l'étape
-    map.fitBounds(etape.gpx.getBounds());
-    // On met le tracé en vert
-    etape.gpx.setStyle({
-        color: '#07756d'
-    });
     // On met les flags à false pour ne pas gérer les mouseover et mouseout
     mouseoverToggle = false
     mouseoutToggle = false
@@ -382,4 +352,19 @@ function AfficheEtapeSurMap(etape) {
     }
     // On stocke la dernière étape cliquée
     lastTrackClicked = etape.gpx;
+    // On centre la carte sur l'étape
+    map.fitBounds(etape.gpx.getBounds());
+    // On met le tracé en vert
+    etape.gpx.setStyle({
+        color: '#07756d'
+    });
+}
+
+// Si on passe sa souris sur une étape depuis la liste à gauche, on change la couleur du tracé sur la carte
+function ChangeTrack(indexEtape) {
+    if (lastTrackClicked != null) {
+        lastTrackClicked.setStyle({ color: '#f59c00' })
+    }
+    etapes[indexEtape].gpx.setStyle({ color: '#07756d'});
+    lastTrackClicked=etapes[indexEtape].gpx;
 }
