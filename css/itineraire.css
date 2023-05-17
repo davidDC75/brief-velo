@@ -105,6 +105,7 @@ div#partie-haute-container div.planifier-itineraire p {
 }
 
 div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire {
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -119,10 +120,14 @@ div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire se
     height: 2.4rem;
     width: 25%;
     margin: 1% 0 3% 1%;
-    padding-left: 10px 0 10px 15px;
+    padding-left: 10px;
 }
 
 div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire span.swap-vert-icon {
+    position: relative;
+    top: -5px;
+    left: 4px;
+    display: inline-block;
     padding: 0;
     margin: 0;
     color: white;
@@ -381,6 +386,8 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-top h2 {
     color: white;
     background-color: #f59c00;
     text-align: center;
+    line-height: 23px;
+    padding: 1.5% 0 1.5% 0;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row {
@@ -389,16 +396,18 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row {
     justify-content: center;
 }
 
-div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row span.etape-distance::after {
-    display: inline-block;
-    font-family: 'Material Symbols Outlined';
-    font-size: 1.3rem;
-    font-weight: 400;
-    font-style: normal;
-    content: 'settings_ethernet';
-    text-transform: none;
-    position: relative;
-    vertical-align: middle;
+div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row span.etape-distance {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row span.etape-temps {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-image img {
@@ -449,7 +458,7 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-descriptio
     font-weight: 400;
     color: black;
     text-align: justify;
-    margin: 1.5vh 2vw 13vh 2vw;
+    margin: 1.5vh 2vw 15vh 2vw;
 }
 
 div#container-liste-etape div.etape-detail-container {
@@ -458,12 +467,12 @@ div#container-liste-etape div.etape-detail-container {
 
 /* Le container en bas de la description d'une étape avec les liens */
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
-    bottom: 0;
+    top: calc(100vh - 130px - 13vh);
     left: 0;
-    width: 100%;
-    height: 10vh;
+    width: 50vw;
+    height: 13vh;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-link {
@@ -472,7 +481,7 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
     justify-content: space-between;
     text-align: center;
     width:100%;
-    height: 3vh;
+    height: 6vh;
     background-color: white;
 }
 
@@ -496,6 +505,7 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button {
     background-color: #07756d;
     width: 100%;
+    height: 7vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -511,6 +521,7 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
     font-weight: 400;
     font-style: normal;
     text-transform: none;
+    display: inline-block;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-suivant a::after {
@@ -520,12 +531,29 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
     font-weight: 400;
     font-style: normal;
     text-transform: none;
+    display: inline-block;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-precedent a,
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-suivant a {
+    display: block;
     color: #fff;
     text-decoration: none;
+    font-family: 'Frutiger';
+    font-size: 0.8rem;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-precedent a {
+    text-align: left;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-suivant a {
+    text-align: right;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-precedent a span,
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-suivant a span {
+    text-transform: uppercase;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-numero-etape {
