@@ -408,38 +408,35 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-fl
     justify-content: space-around;
     background-color: #eee;
     height: 5vh;
-}
-
-div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart {
-    font-family: 'Frutiger';
-    font-size: 1rem;
-    color: black;
-}
-
-div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart::before {
     position: relative;
-    display: block;
-    content: " ";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid #54b40b;
 }
 
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart,
 div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-arrive {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart span {
     font-family: 'Frutiger';
     font-size: 1rem;
     color: black;
 }
 
-div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-arrive::after {
-    position: relative;
-    display: block;
-    content: " ";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid #ef4136;
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-depart i.circle1 {
+    color: #54b40b;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-arrive span {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: black;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-dep-arr-flex div.etape-detail-ville-arrive i.circle2 {
+    color: #ef4136;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-description p {
