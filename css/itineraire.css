@@ -139,11 +139,12 @@ div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire bu
     text-transform: uppercase;
     background-color: #586eb8;
     color: white;
-    height: 2.4rem;
+    font-size: 1.2rem;
     border: 2px solid white;
     border-radius: 10px;
     margin: 1% 0 3% 5%;
     padding: 0 2% 0 2%;
+    height: 5vh;
 }
 
 div#partie-haute-container div#gpx-container {
@@ -227,16 +228,64 @@ div.etape-content-container h2 {
     padding: 1.5% 0 1.5% 3%;
 }
 
-div.etape-content-container span {
-    font-family: 'Poppins';
-    font-size: 1.3rem;
-    font-weight: 600;
+div.etape-content-container div.difficulte {
+    margin-top: 2vh;
+}
+
+span.difficulte-1 {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: #52BE80;
+    padding-left: 2%;
+}
+
+b.difficulte-1-circle {
+    display: inline-block;
+    background-color: #52BE80;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+span.difficulte-2 {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: #3498DB;
+    padding-left: 2%;
+}
+
+b.difficulte-2-circle {
+    display: inline-block;
+    background-color: #3498DB;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+span.difficulte-3 {
+    font-family: 'Frutiger';
+    font-size: 1rem;
+    color: #E74C3C;
+    padding-left: 2%;
+}
+
+b.difficulte-3-circle {
+    display: inline-block;
+    background-color: #E74C3C;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+div.etape-content-container span.etape-dep-arr {
+    font-family: 'Frutiger';
+    font-size: 1.1rem;
     color: black;
-    padding: 2% 0 2% 2%;
+    padding: 1% 0 2% 2%;
 }
 
 div.etape-content-container p {
-    font-family: 'Poppins';
+    font-family: 'Frutiger';
     font-size: 1.1rem;
     color: #585858;
     padding: 1% 0 2% 2%;
@@ -595,6 +644,11 @@ div.map-marker:hover {
 
     div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed {
         width: 100vw;
+    }
+
+    div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire button {
+        font-weight: 400;
+        font-size: 0.9rem;
     }
 
 }

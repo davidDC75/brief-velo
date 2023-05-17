@@ -176,6 +176,9 @@ function populateListeEtape(etape,i) {
     let villeDepart=etape.attributes.ville_depart;
     let villeArrive=etape.attributes.ville_arrive;
     let texte=etape.attributes.texte;
+    let difficulte=etape.attributes.difficulte;
+    difficulte=getDifficulteHTML(difficulte);
+
     texte=texte.substring(0,200)+' [...]';
     // On crée la liste des étapes une à une
     listeEtape = listeEtape +
@@ -186,13 +189,25 @@ function populateListeEtape(etape,i) {
         </div>
         <div class="etape-content-container">
             <h2>${titre}</h2>
-            <span>${villeDepart} &gt; ${villeArrive}</span>
+            ${difficulte}
+            <span class="etape-dep-arr">${villeDepart} &gt; ${villeArrive}</span>
             <p>${texte}</p>
         </div>
     </div>`;
 
 }
 
+function getDifficulteHTML(difficulte) {
+    switch(difficulte) {
+        case 1:
+            return '<div class="difficulte"><span class="difficulte-1">Je débute / En famille&nbsp</span><b class="difficulte-1-circle"></b></div>';
+            break;
+        case 2:
+            return '<div class="difficulte"><span class="difficulte-2">J\'ai l\'habitude&nbsp;</span><b class="difficulte-2-circle"></b></div>';
+            break;
+    }
+    return '<div class="difficulte"><span class="difficulte-3">Je me dépasse&nbsp;</span><b class="difficulte-3-circle"></b></div>';
+}
 // Appelé lorsque l'on clique sur la fléche qui permet de retourner à la liste des étapes
 function retourneListeEtape() {
     afficheTopLeftContainer();
