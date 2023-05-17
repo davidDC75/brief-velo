@@ -1,0 +1,50 @@
+/* test */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body{
+    padding: 50px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat (3 1fr);
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    grid-gap: 24px ;
+}
+
+@media (min-width: 540px) {
+    .cards {
+        grid-template-columns: repeat(2 1fr);
+
+
+    }
+}
+
+@media (min-width: 960px) {
+    .cards {
+        grid-template-columns: repeat(3 1fr);
+    }
+}
+
+.card {
+    position: relative;
+
+
+}
+
+/* .card-backgroud{
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+} */
