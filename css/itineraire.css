@@ -495,6 +495,36 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button {
     background-color: #07756d;
     width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Frutiger';
+    font-size: 1rem;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-precedent a::before {
+    content: "arrow_back";
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-suivant a::after {
+    content: "arrow_forward";
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-precedent a,
+div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button div.etape-detail-bottom-bouton-suivant a {
+    color: #fff;
+    text-decoration: none;
 }
 /*************************************
 **************************************/
