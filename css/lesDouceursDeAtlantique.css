@@ -24,8 +24,8 @@
 }
 
 img{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     border-radius: 10px;
     margin-bottom: 100%;
 }
@@ -38,13 +38,15 @@ img{
 }
 
 .carte_la_douceur_de_atlantique{
-   position: absolute;
+    /* width: 100%;
+    max-width: 1200px; */
+    position: absolute;
     display: grid;
-    margin-left: 17%;
+    margin-left: 12%;
     margin-top: 4%;
     margin-bottom: 100%;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 400px 400px 400px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
     gap: 30px;
     row-gap: 30px;
 }
@@ -68,9 +70,8 @@ h3 {
     font-family: "Mukta Mahee",sans-serif;
     font-weight: 600;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1em;
-
 }
 
 p {
@@ -103,15 +104,11 @@ span{
     transform: translate(-50%,0);
     overflow: hidden;
     z-index: 6;
-    
 }
 
 div span{
     display: inline-block;
 }
-
-
-
 
 /* .image_effet{
     content: "";

@@ -1,7 +1,7 @@
 /* FOOTER */
 
 html body {
-    font-family: "Mukta Mahee",sans-serif;
+    font-family: "Frutiger" 45 light;
     font-weight: 400;
 }
 
@@ -18,11 +18,11 @@ footer {
 .image_footer{
     display: grid;
     position: absolute;
-    width: 110%;
-    height: 30%;
-    margin-right: 102%;
+    width: 122%;
+    height: 50%;
+    margin-right: 110%;
     margin-left: -30%;
-    /* margin-bottom: 10%;  */
+    margin-bottom: 10%; 
     /* margin-top: -3%; */
     
 }
