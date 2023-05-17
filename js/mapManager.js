@@ -178,7 +178,7 @@ function populateListeEtape(etape,i) {
     texte=texte.substring(0,100)+' [...]';
     // On crée la liste des étapes une à une
     listeEtape = listeEtape +
-    `<div class="etape-container" onclick="afficheEtape(${i});" onmouseover="ChangeTrack(${i});" id="etape-container-${i}">
+    `<div class="etape-container" onclick="afficheEtape(${i});" onmouseover="ChangeTrack(${i});" onmouseout="quitteTrack(${i});" id="etape-container-${i}">
         <div class="image-etape-container">
             <img src="${image}" class="image-etape">
             <span class="distance-etape">${distance} km</span>
@@ -325,6 +325,7 @@ function afficheEtape(etape) {
     // Le container de la liste des étapes sert aussi de container pour une description d'une étape
     containerListeEtape.innerHTML=etapeHTML;
 
+    // On cache les boutons suivant ou précédent si besoin
     divBoutonPrecedent=document.getElementById('bouton-etape-precedente');
     divBoutonSuivant=document.getElementById('bouton-etape-suivante');
 
@@ -360,11 +361,15 @@ function AfficheEtapeSurMap(etape) {
     });
 }
 
-// Si on passe sa souris sur une étape depuis la liste à gauche, on change la couleur du tracé sur la carte
+// Si on passe sa souris sur une étape depuis la liste des étapes à gauche, on change la couleur du tracé sur la carte
 function ChangeTrack(indexEtape) {
     if (lastTrackClicked != null) {
         lastTrackClicked.setStyle({ color: '#f59c00' })
     }
     etapes[indexEtape].gpx.setStyle({ color: '#07756d'});
     lastTrackClicked=etapes[indexEtape].gpx;
+}
+
+function quitteTrack(indexEtape) {
+    etapes[indexEtape].gpx.setStyle({ color: '#f59c00'});
 }
