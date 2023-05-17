@@ -303,20 +303,26 @@ function afficheEtape(etape) {
                     <a href="#"><span class="material-symbols-outlined">print</span>&nbsp;FICHE PDF</a>
                 </div>
                 <div class="etape-detail-bottom-button">
-                    <div class="etape-detail-bottom-bouton-precedent" id="bouton-etape-precedente">
-                        <a href="#" onclick="afficheEtape(${etapePrecedente})">
-                            <span>étape précédente</span><br>
-                            depuis ${villePrecedente}
-                        </a>
+                    <div class="container-bouton-precedent">
+                        <div><a href="#" onclick="afficheEtape(${etapePrecedente})"><span class="material-symbols-outlined">arrow_back</span></a></div>
+                        <div class="etape-detail-bottom-bouton-precedent" id="bouton-etape-precedente">
+                            <a href="#" onclick="afficheEtape(${etapePrecedente})">
+                                <span>étape précédente</span><br>
+                                depuis ${villePrecedente}
+                            </a>
+                        </div>
                     </div>
                     <div class="etape-detail-bottom-numero-etape">
                         ${numeroEtape}/${nbEtapes}
                     </div>
-                    <div class="etape-detail-bottom-bouton-suivant" id="bouton-etape-suivante">
-                        <a href="#" onclick="afficheEtape(${etapeSuivante})">
-                            <span>étape suivante</span><br>
-                            vers ${villeSuivante}
-                        </a>
+                    <div class="container-bouton-suivant">
+                        <div class="etape-detail-bottom-bouton-suivant" id="bouton-etape-suivante">
+                            <a href="#" onclick="afficheEtape(${etapeSuivante})">
+                                <span>étape suivante</span><br>
+                                vers ${villeSuivante}
+                            </a>
+                        </div>
+                        <div><a href="#" onclick="afficheEtape(${etapeSuivante})"><span class="material-symbols-outlined">arrow_forward</span></a></div>
                     </div>
                 </div>
             </div>
