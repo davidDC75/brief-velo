@@ -175,7 +175,7 @@ function populateListeEtape(etape,i) {
     let villeDepart=etape.attributes.ville_depart;
     let villeArrive=etape.attributes.ville_arrive;
     let texte=etape.attributes.texte;
-    texte=texte.substring(0,100)+' [...]';
+    texte=texte.substring(0,200)+' [...]';
     // On crée la liste des étapes une à une
     listeEtape = listeEtape +
     `<div class="etape-container" onclick="afficheEtape(${i});" onmouseover="ChangeTrack(${i});" onmouseout="quitteTrack(${i});" id="etape-container-${i}">
@@ -276,10 +276,11 @@ function afficheEtape(etape) {
             </div>
             <div class="etape-detail-flex-row">
                 <span class="etape-distance">
-                    ${distance} Km
+                    ${distance} Km&nbsp;
                 </span>
+                <span class="material-symbols-outlined">settings_ethernet</span>
                 <span class="etape-temps">
-                 0 h 00 min
+                 &nbsp;0 h 00 min
                  </span>
                  <span class="etape-difficulte">
                  </span>
@@ -304,7 +305,7 @@ function afficheEtape(etape) {
                 <div class="etape-detail-bottom-button">
                     <div class="etape-detail-bottom-bouton-precedent" id="bouton-etape-precedente">
                         <a href="#" onclick="afficheEtape(${etapePrecedente})">
-                            ETAPE PRECEDENTE<br>
+                            <span>étape précédente</span><br>
                             depuis ${villePrecedente}
                         </a>
                     </div>
@@ -313,7 +314,7 @@ function afficheEtape(etape) {
                     </div>
                     <div class="etape-detail-bottom-bouton-suivant" id="bouton-etape-suivante">
                         <a href="#" onclick="afficheEtape(${etapeSuivante})">
-                            ETAPE SUIVANTE<br>
+                            <span>étape suivante</span><br>
                             vers ${villeSuivante}
                         </a>
                     </div>
