@@ -1,21 +1,22 @@
 
 .titre{
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'frutiger'87 Extra black condensed;
     font-weight: 300;
     font-size: 2.625rem;
+    margin-left: 20%;
     
 }
 
 .sous_titre{
     text-align: center;
     font-size: 110%;
-    
     color: #585858;
     line-height: 1.5em;
     margin-top: 15px;
     margin-bottom: 15px;
-    font-family: "Mukta Mahee",sans-serif;
+    margin-left: 25%;
+    font-family: "frutiger"45 light;
     font-weight: 500;
 }
 
@@ -73,6 +74,10 @@ h3 {
     font-size: 1.2rem;
     line-height: 1em;
 }
+.texte_des_cartes{
+    color: white;
+}
+
 
 p {
     position: absolute;
