@@ -235,6 +235,7 @@ function afficheEtape(etape) {
     image=flag?etapes[etape].attributes.image.data.attributes.url:etape.attributes.image.data.attributes.url;
     fichierGpx=flag?etapes[etape].attributes.gpx.data[0].attributes.url:etape.attributes.gpx.data[0].attributes.url;
     distance=flag?etapes[etape].attributes.distance:etape.attributes.distance;
+    difficulte=flag?etapes[etape].attributes.difficulte:etape.attributes.difficulte;
     index=flag?etapes[etape].index:etape.index;
     numeroEtape=index+1;
 
@@ -260,6 +261,8 @@ function afficheEtape(etape) {
         etapeSuivante=index+1;
         villeSuivante=etapes[index+1].attributes.ville_arrive;
     }
+
+    difficulte=getDifficulteHTML(difficulte);
 
     containerTopleft.innerHTML=`
     <div class="top-etape-flex-column">
@@ -298,8 +301,7 @@ function afficheEtape(etape) {
                 <span class="etape-temps">
                  &nbsp;0 h 00 min
                  </span>
-                 <span class="etape-difficulte">
-                 </span>
+                 ${difficulte}
             </div>
             <div class="etape-detail-image">
                 <img src="${urlStrapi}${image}">

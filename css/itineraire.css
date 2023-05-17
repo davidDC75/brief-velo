@@ -229,6 +229,7 @@ div.etape-content-container h2 {
 }
 
 div.etape-content-container div.difficulte {
+    display: inline;
     margin-top: 2vh;
 }
 
@@ -457,6 +458,10 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row s
     font-size: 1rem;
     font-weight: 500;
     color: black;
+}
+
+div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row div.difficulte {
+    width: 20vw;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-image img {
