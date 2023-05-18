@@ -459,7 +459,8 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row s
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row div.difficulte {
-    width: 10vw;
+    text-align: center;
+    width: 30%;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-image img {
@@ -532,6 +533,7 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
     text-align: center;
     width:100%;
     height: 6vh;
