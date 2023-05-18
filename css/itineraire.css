@@ -139,12 +139,12 @@ div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire bu
     text-transform: uppercase;
     background-color: #586eb8;
     color: white;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     border: 2px solid white;
     border-radius: 10px;
     margin: 1% 0 3% 5%;
     padding: 0 2% 0 2%;
-    height: 5vh;
+    height: 3vh;
 }
 
 div#partie-haute-container div#gpx-container {
@@ -374,6 +374,8 @@ div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 {
 div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container {
     width: 50%;
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 div#partie-haute-container div.top-etape-flex-column div.top-etape-flex-row-3 div.lien-container a.onglet-menu {
@@ -431,6 +433,9 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-top h2 {
     text-align: center;
     line-height: 23px;
     padding: 1.5% 0 1.5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row {
