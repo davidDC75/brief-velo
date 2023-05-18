@@ -2,7 +2,7 @@
 var map = L.map('map').setView([50.8, 2.6], 9);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: '<a href="./index.html">Eurovélo 5</a>'
 }).addTo(map);
 
 
@@ -11,7 +11,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Il est désactivé quand on click sur un tracé ou une étape de la liste
 let mouseoverToggle=true;
 let mouseoutToggle=true;
-// Permet de stocké le dernier tracé sélectionné
+// Permet de stocker le dernier tracé sélectionné
 let lastTrackClicked=null;
 
 let containerLeftSide=document.getElementById('left-side-container');
@@ -25,7 +25,7 @@ let listeEtape='';
 let urlStrapi='http://85.169.220.243:5003';
 // La liste des étapes récupéré dans strapi
 let etapes=null;
-// Nombre d'étape
+// Nombre d'étapes
 let nbEtapes=0;
 
 
@@ -62,8 +62,6 @@ function drawMap(etapes) {
         etape.gpx = new L.GPX(urlStrapi + etape.attributes.gpx.data[0].attributes.url, {
             async: true,
             marker_options: {
-                shadowUrl: '',
-                shadowSize: [0,0],
                 // On utilise des classes avec des div plutôt que des images
                 startIcon: new L.divIcon({
                     html: (isFirst)?'<div class="start-map-marker"></div>':'<div class="map-marker"></div>'
@@ -95,13 +93,13 @@ function drawMap(etapes) {
                 if (lastTrackClicked!=null) {
                     lastTrackClicked.setStyle({ color: '#f59c00' })
                 }
-                // On stocke la track sélectionné afin de pouvoir la récupèrer après un autre clique
-                lastTrackClicked = e.target
+                // On stocke la track sélectionnée afin de pouvoir la récupèrer après un autre clique
+                lastTrackClicked = e.target;
                 // On appelle afficheEtape pour affiché l'étape
                 afficheEtape(etape);
             }).on('mouseover mousemove', function (e) {
                 // Si on passe la souris sur le tracé, on change la couleur en vert
-                if (mouseoverToggle == true) {
+                if (mouseoverToggle==true) {
                     this.setStyle({
                         color: '#07756d'
                     });
@@ -111,15 +109,15 @@ function drawMap(etapes) {
                     L.popup()
                         .setLatLng(e.latlng)
                         .setContent(etape.attributes.ville_depart + " -> " + etape.attributes.ville_arrive +"<br>" + distance + "km")
-                        .openOn(map)
+                        .openOn(map);
                 }
             }).on('mouseout', function () {
                 // quand on sort du tracé, on remet la couleur en orange
-                if (mouseoutToggle == true) {
+                if (mouseoutToggle==true) {
                     map.closePopup();
                     this.setStyle({
                         color: '#f59c00'
-                    })
+                    });
                 }
             });
         // On crée le html de la liste des étape pour l'étape correspondante
@@ -144,33 +142,44 @@ function calculateDistance(distance) {
 
 // Le block du haut de la liste des étapes
 function afficheTopLeftContainer() {
-    containerTopleft.innerHTML=`<div class="etape-menu">
-    <div class="lien-container lien-container-selected"><a href="#" class="onglet-menu onglet-menu-selected"><span class="onglet-menu-etapes">étapes</span></a></div>
-    <div class="lien-container"><a href="#" class="onglet-menu"><span class="onglet-menu-boucles">boucles</span></a></div>
-    <div class="lien-container"><a href="#" class="onglet-menu"><span class="onglet-menu-gps">mon gps</span></a></div>
-</div>
-<div class="planifier-itineraire">
-    <p>Planifier un itinéraire sur cette véloroute</p>
-    <div class="formulaire-itineraire">
-        <select name="etape-depart" id="etape-depart">
-            <option value="">Etape de départ</option>
-        </select>
-        <span class="swap-vert-icon material-symbols-outlined">swap_vert</span>
-        <select name="etape-arrive" id="etape-arrive">
-            <option value="">Etape d'arrivée</option>
-        </select>
-        <button>Planifier mon itinéraire</button>
+    containerTopleft.innerHTML=`
+    <div class="etape-menu">
+        <div class="lien-container lien-container-selected">
+            <a href="#" class="onglet-menu onglet-menu-selected"><span class="onglet-menu-etapes">étapes</span></a>
+        </div>
+        <div class="lien-container">
+            <a href="#" class="onglet-menu">
+                <span class="onglet-menu-boucles">boucles</span>
+            </a>
+        </div>
+        <div class="lien-container">
+            <a href="#" class="onglet-menu">
+                <span class="onglet-menu-gps">mon gps</span>
+            </a>
+        </div>
     </div>
-</div>
-<div id="gpx-container">
-    <a href="./gpx/trace-complet.gpx">Télécharger le .gpx de la vélodyssée</a>
-</div>`;
+    <div class="planifier-itineraire">
+        <p>Planifier un itinéraire sur cette véloroute</p>
+        <div class="formulaire-itineraire">
+            <select name="etape-depart" id="etape-depart">
+                <option value="">Etape de départ</option>
+            </select>
+            <span class="swap-vert-icon material-symbols-outlined">swap_vert</span>
+            <select name="etape-arrive" id="etape-arrive">
+                <option value="">Etape d'arrivée</option>
+            </select>
+            <button>Planifier mon itinéraire</button>
+        </div>
+    </div>
+    <div id="gpx-container">
+        <a href="./gpx/trace-complet.gpx">Télécharger le .gpx de la vélodyssée</a>
+    </div>`;
 }
 
 // Préparation de la liste des étapes
 function populateListeEtape(etape,i) {
-    // containerListeEtape;
-    let image=urlStrapi+etape.attributes.image.data.attributes.url;
+    // On récupère les données de l'étape
+    let image=urlStrapi+etape.attributes.image.data.attributes.formats.small.url;
     let distance=etape.attributes.distance;
     let titre=etape.attributes.titre_texte;
     let villeDepart=etape.attributes.ville_depart;
@@ -181,40 +190,47 @@ function populateListeEtape(etape,i) {
 
     texte=texte.substring(0,200)+' [...]';
     // On crée la liste des étapes une à une
-    listeEtape = listeEtape +
-    `<div class="etape-container" onclick="afficheEtape(${i});" onmouseover="ChangeTrack(${i});" onmouseout="quitteTrack(${i});" id="etape-container-${i}">
-        <div class="image-etape-container">
-            <img src="${image}" class="image-etape">
-            <span class="distance-etape">${distance} km</span>
-        </div>
-        <div class="etape-content-container">
-            <h2>${titre}</h2>
-            ${difficulte}
-            <span class="etape-dep-arr">${villeDepart} &gt; ${villeArrive}</span>
-            <p>${texte}</p>
-        </div>
-    </div>`;
-
+    listeEtape=listeEtape+`
+        <div class="etape-container" onclick="afficheEtape(${i});" onmouseover="ChangeTrack(${i});" onmouseout="quitteTrack(${i});" id="etape-container-${i}">
+            <div class="image-etape-container">
+                <img src="${image}" class="image-etape">
+                <span class="distance-etape">${distance} km</span>
+            </div>
+            <div class="etape-content-container">
+                <h2>${titre}</h2>
+                ${difficulte}
+                <span class="etape-dep-arr">${villeDepart} &gt; ${villeArrive}</span>
+                <p>${texte}</p>
+            </div>
+        </div>`;
 }
 
+// Retourne le code HTML d'un niveau de difficulté (de 1 à 3)
 function getDifficulteHTML(difficulte) {
     switch(difficulte) {
         case 1:
-            return '<div class="difficulte"><span class="difficulte-1">Je débute / En famille&nbsp</span><b class="difficulte-1-circle"></b></div>';
+            return `<div class="difficulte">
+                        <span class="difficulte-1">Je débute / En famille&nbsp</span><b class="difficulte-1-circle"></b>
+                    </div>`;
             break;
         case 2:
-            return '<div class="difficulte"><span class="difficulte-2">J\'ai l\'habitude&nbsp;</span><b class="difficulte-2-circle"></b></div>';
+            return `<div class="difficulte">
+                        <span class="difficulte-2">J\'ai l\'habitude&nbsp;</span><b class="difficulte-2-circle"></b>
+                    </div>`;
             break;
     }
-    return '<div class="difficulte"><span class="difficulte-3">Je me dépasse&nbsp;</span><b class="difficulte-3-circle"></b></div>';
+    return `<div class="difficulte">
+                <span class="difficulte-3">Je me dépasse&nbsp;</span><b class="difficulte-3-circle"></b>
+            </div>`;
 }
+
 // Appelé lorsque l'on clique sur la fléche qui permet de retourner à la liste des étapes
 function retourneListeEtape() {
     afficheTopLeftContainer();
     // On injecte la liste des étapes dans le container
     containerListeEtape.innerHTML=listeEtape;
     // On remet la map à son origine
-    map.setView([50.8, 2.6], 9);
+    map.setView([50.8, 2.6],9);
     // On remet les flag à true pour gérer les mouseover et mouseout
     mouseoverToggle = true;
     mouseoutToggle = true;
@@ -353,17 +369,10 @@ function afficheEtape(etape) {
     divBoutonPrecedent=document.getElementById('bouton-etape-precedente');
     divBoutonSuivant=document.getElementById('bouton-etape-suivante');
 
-    if (boutonPrecedent==false) {
-        divBoutonPrecedent.style.visibility='hidden';
-    } else {
-        divBoutonPrecedent.style.visibility='visible';
-    }
+    // On affiche ou pas les boutons précédent et suivant
+    divBoutonPrecedent.style.visibility=(boutonPrecedent==false)?'hidden':'visible';
+    divBoutonSuivant.style.visibility=(boutonSuivant==false)?'hidden':'visible';
 
-    if (boutonSuivant==false) {
-        divBoutonSuivant.style.visibility='hidden';
-    } else {
-        divBoutonSuivant.style.visibility='visible';
-    }
     // On remonte le scrool au début de l'étape
     containerLeftSide.scroll(0,0);
 }
@@ -371,14 +380,14 @@ function afficheEtape(etape) {
 // Clic des boutons
 function AfficheEtapeSurMap(etape) {
     // On met les flags à false pour ne pas gérer les mouseover et mouseout
-    mouseoverToggle = false
-    mouseoutToggle = false
+    mouseoverToggle = false;
+    mouseoutToggle = false;
     // Si une track été déjà cliqué alors on la remet à sa couleur d'origine
-    if (lastTrackClicked != null) {
+    if (lastTrackClicked!=null) {
         lastTrackClicked.setStyle({ color: '#f59c00' })
     }
     // On stocke la dernière étape cliquée
-    lastTrackClicked = etape.gpx;
+    lastTrackClicked=etape.gpx;
     // On centre la carte sur l'étape
     map.fitBounds(etape.gpx.getBounds());
     // On met le tracé en vert
@@ -389,7 +398,7 @@ function AfficheEtapeSurMap(etape) {
 
 // Si on passe sa souris sur une étape depuis la liste des étapes à gauche, on change la couleur du tracé sur la carte
 function ChangeTrack(indexEtape) {
-    if (lastTrackClicked != null) {
+    if (lastTrackClicked!=null) {
         lastTrackClicked.setStyle({ color: '#f59c00' })
     }
     etapes[indexEtape].gpx.setStyle({ color: '#07756d'});
