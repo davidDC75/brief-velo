@@ -11,7 +11,7 @@
 }
 
 
-body{
+header{
     background-image: url(https://www.lavelodyssee.com/sites/velodyssee/files/styles/slide_1920x1080/public/medias/images/48858141243_f29f120125_6k%2520%25281%2529_1.webp?h=e5aec6c8&itok=xEd6aDOY);
     background-repeat: no-repeat;
 }
@@ -89,7 +89,7 @@ header .logo{
         margin-right: 1%;
     }
     header .lastHeader{
-        background-color: white;
+        background-color: rgb(249, 249, 249);
     }
     header input{
         background-color:transparent ;
@@ -187,5 +187,14 @@ header{
   width: 100vw;
   height: 100vh;
 }
- 
+.img{
+  height: 30%;
+}
+
+@media (max-width:1500px){
+  .img{
+  height: 40%;}
   
+
+}
+
