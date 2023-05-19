@@ -1,0 +1,128 @@
+.main2 {
+    font-family: 'poppins', sans-serif ;
+}
+.main2 .ldap{
+    font-family: 'poppins', sans-serif ;
+    font-size: 43px;
+    margin-left:35% ;
+  
+}
+.main2 .np, .main2 .lv{
+    font-family: 'poppins', sans-serif ;
+    font-weight: 500;
+    font-size: larger;
+} 
+
+.main2 .lv{
+   margin-left: 36.5% ; 
+}
+
+.main2 .np{
+margin-left: 33%;
+}
+
+.main2 .bloc{
+    padding: 1% 1% 1% 1%;
+    background-color:#f0f0f0 ;
+    width: 17.5%;
+}
+.main2 .haut{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main2 .ab{
+    padding: 4px ;
+    background-color: orange;
+    width: 59%;
+    font-size: 13px;
+}
+.main2 .mp{
+    padding: 4px ;
+    background-color: orange;
+    width: 53%;
+    font-size: 13px;
+}
+.main2 .pj{
+    padding: 4px ;
+    background-color: orange;
+    width: 37%;
+    font-size: 13px;
+}
+.main2 .tc{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 1%;
+    margin-top: 9%;
+}
+.main2 .c{
+    display: flex;
+    flex-direction: column;
+   
+   
+}
+.main2 .cq{
+margin: 0;
+font-weight: 700;
+}
+.main2 .sc{ 
+font-size: 13px;
+margin: 0;
+margin-right: 9px;
+}
+.main2 .fa-star ,.fa-regular{
+    color:#ddb726;
+}
+.main2 .david{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.main2 .bab{
+    font-weight: 700;
+    font-size: 1rem;
+}
+.main2 .pbe{
+    font-weight: 600;
+    font-size: 13px;
+    line-height:1.5em;
+    color: #585858;
+}
+.main2 .bas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main2 .lire{
+    text-decoration: none;
+    color:#007c74;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+.main2 .reponse{
+    font-weight: 700;
+    font-size: 1rem;
+    color:#585858 ;
+}
+.main2 .ldap ,.lv,.np {
+    color: #000;
+    padding-bottom: 0;
+}
+.main2 .lv, .np{
+    color: #585858;
+   
+}
+.main2 .blocG{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+
+}
+.main2 .bloc1{
+    margin-left:17% ;
+}
+.main2 .bloc3{
+    margin-right: 17%;
+}
+

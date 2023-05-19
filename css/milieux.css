@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Frutiger_bold';
+    src:  url('font/Frutiger_bold.woff') format('woff'); 
+}
+@font-face {
+    font-family: 'Frutiger';
+    src:  url('font/Frutiger.woff') format('woff');
+}
+
+.main1 .globale{
+    background-image: url(https://www.lavelodyssee.com/sites/velodyssee/themes/velodyssee/images/temoignage.jpg);
+}
+
+
+.main1 h1{
+    font-family: 'Poppins', sans-serif;
+  font-size: 45px;
+    color: white;
+     margin-bottom: 0;
+    padding-bottom: 0;
+    font-weight:400 ;
+}
+.main1 p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: white;
+    padding-bottom: 4%;
+}
+.main1 .iof{
+    margin-left:19% ;
+    padding-top: 4%;
+   
+}
+.main1 .imgs{
+    display: flex;
+    justify-content: space-around;
+ 
+}
+.main1 .tlts{
+    border: white 2px solid;
+    border-radius: 3px;
+    padding: 0.5%;
+
+    
+
+}
+.main1 .img{
+    border-radius: 5px;
+}
+.main1 a{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+.main1 .tlt{
+    margin-left: 19%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+.main1 .hh{
+    text-align: center;
+    color: white;
+    padding: 0 12% 0 5%;
+
+    bottom: 34%;
+    position: relative;
+}
+.main1 .phh{
+   text-align: center;
+    color: white;
+    padding: 0 12% 0 5%;
+   
+    bottom: 35%;
+    position: relative;
+}
