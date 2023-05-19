@@ -36,6 +36,35 @@
     
 }
 
+/* .text_effet{
+    transition: all .2s ease-out;
+    bottom: 40px;
+    padding: 0 40px;
+    
+}
+
+.text_effet{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    z-index: 6;
+}
+
+.text_effet h3 {
+    margin: 0;
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 201.5rem;
+    line-height: 201em;
+}
+
+div .text_effet a{
+    color: inherit;
+    text-decoration: none;
+} */
+
 .image_des_cartes{
     height: 400px;
     width: 400px;
