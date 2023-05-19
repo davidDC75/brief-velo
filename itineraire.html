@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
@@ -11,10 +15,70 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/itineraire.css">
     <title>EuroVélo - Itinéraire</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="firstHeader">
+                <div class="firstHeaderChild1">
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <p> <strong> S'abonner à la newsletter</strong></p>
+                    <form class="form">
+                        <input type="email" name="mail" placeholder="votre adresse mail">
+
+                        <button type="submit" class="submit">
+                        <strong>  JE M'INSCRIS</strong>
+                        </button>
+                    </form>
+                </div>
+                <div class="firstHeaderChild2">
+
+                    <a>
+                        <p> Espace pro </p>
+                    </a>
+
+                    <div class="carnet">
+                        <i class="fa-solid fa-heart"></i>
+                        <p class="pp">Carnet de voyage</p>
+                    </div>
+
+                    <div class="espacePersonnel">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="pp"> espace personnel</p>
+                    </div>
+                    <i class="fa-solid fa-flag"></i>
+                </div>
+            </div>
+
+
+
+            <div class="lastHeader">
+
+                <div class="lastHeaderChild1">
+                    <a href=""><img class="logo" src="images/footer/logo.png" alt="" ></a>
+
+                            <a href="" class="nonetel"> l'itinéraire</a>
+                            <a href="" class="nonetel"> témoignages  </a>
+                            <a href="" class="nonetel"> infos pratiques </a>
+                            <a href="" class="nonetel"> suggestions</a>
+                            <a href="" class="nonetel"> inspiration </a>
+                            <a href="" class="actualités nonetel"> actualités</a>
+                            <i class="fa-solid fa-message nonetel"></i>
+                            <a href="" class=" passeport nonetel"> passeport</a>
+                            <i class="fa-solid fa-map nonetel"></i>
+
+                </div>
+                <div class="lastHeaderChild2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- container principale avec les infos à gauche et la map à droite -->
     <div id="itineraire-container">
         <div id="left-side-container">
