@@ -15,11 +15,11 @@ body{
     background-image: url(https://www.lavelodyssee.com/sites/velodyssee/files/styles/slide_1920x1080/public/medias/images/48858141243_f29f120125_6k%2520%25281%2529_1.webp?h=e5aec6c8&itok=xEd6aDOY);
     background-repeat: no-repeat;
 }
-.lastHeaderChild1 a{
+header .lastHeaderChild1 a{
     font-family:'Frutiger_bold' ;
 }
 
-.firstHeader{
+header .firstHeader{
    
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@ body{
     align-items: center;
     
 }
-.firstHeaderChild1{
+header .firstHeaderChild1{
     display: flex;
     align-items: center;
     flex: 0.34;
@@ -39,7 +39,7 @@ body{
     font-size: 1rem;
     
 }
-.firstHeaderChild2{
+header .firstHeaderChild2{
     display: flex;
     align-items: center;
     flex: 0.26;
@@ -50,94 +50,97 @@ body{
     color: white;
     font-family:'Frutiger_bold'
 }
-.carnet{
+header .carnet{
     display: flex;
     align-items: center;
     flex: 0.4;
     justify-content: space-around;
 }
-.espacePersonnel{
+header .espacePersonnel{
     margin-bottom: 0%;
     display: flex;
     align-items: center;
     flex: 0.4;
     justify-content: space-around;  
 }
-.logo{
+header .logo{
     height: 50px;
     }
-   .lastHeader a{
+    header .lastHeader a{
         text-transform: uppercase;
     }
-    a{
+    header a{
         text-decoration: none;
     }
 
-    .lastHeader{
+    header .lastHeader{
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .lastHeaderChild1{
+    header .lastHeaderChild1{
         display: flex;
         align-items: center;
         flex: 0.69;
         justify-content: space-around;
         margin:0.65% 0.5%;
     }
-    .lastHeaderChild2{
+    header .lastHeaderChild2{
         margin-right: 1%;
     }
-    .lastHeader{
+    header .lastHeader{
         background-color: white;
     }
-    input{
+    header input{
         background-color:transparent ;
         border: none;
        
     }
-    button{
+    header button{
         border: none;
         background-color:#07756d;
         padding: 10px;
     }
  
-  .pp{
+    header .pp{
     margin: 0;
   }
  
-  .actualités{
+  header .actualités{
     color:#ea5a58 ;
   }
-  .passeport{
+  header .passeport{
     color:#09786f ;
   }
-  .submit{
+  header .submit{
     color: white;
   }
-  .title-h1 {
+  header .title-h1 {
     color: white;
      font-size: 3.5rem;
      font-family: 'Poppins', sans-serif;
      margin: 0%;
   }
-  .title-h2{
+  header .title-h2{
     font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 3rem;
     font-weight: 400;
     margin: 0;
   }
-  .title-container{
-    position: relative;
+  header .title-container{
+    position: absolute;
+    top: 75vh;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  .title{
+  header .title{
    position: relative;
    text-align: center;
-   top: 58vh;
+   
   }
  
-  .FORM2{
+  header .FORM2{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -145,7 +148,7 @@ body{
     
   }
 
-  .depart{
+  header .depart{
     margin: 1.5% 1% 0 4%;
     padding: 0.7% 3.0% 0.7% 0.5%;
     background-color: white;
@@ -154,7 +157,7 @@ body{
     font-size: 15px;
     border: none;
   }
-  .departe{
+  header .departe{
     margin: 1.5% 1.5% 0 0.5%;
     padding: 0.7% 3% 0.7% 0.9%;
     background-color: white;
@@ -163,23 +166,26 @@ body{
     font-size: 15px;
     border: none;
   }
-  .calcule{
+  header .calcule{
     
     margin-top: 1.5%;
     margin-right: 4.0%;
   }
-  .submit2 {
+  header .submit2 {
     border-radius: 5px;
     padding: 13px 40px;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
   }
-  .circle1{
+  header .circle1{
     color: green;
   }
-  .circle2{
+  header .circle2{
     color: red;
   }
-
+header{
+  width: 100vw;
+  height: 100vh;
+}
  
   
