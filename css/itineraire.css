@@ -657,7 +657,7 @@ div#button-responsive-to-etape {
 /*****************************************
 *****************************************/
 /* Partie Responsive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     div#map {
         display: none;
         width: 100vw;
