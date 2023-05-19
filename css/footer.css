@@ -5,14 +5,21 @@ html body {
     font-weight: 400;
 }
 
+
 *{
     box-sizing: border-box;
     outline: 0;
   }
 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 footer {
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 0%;
     margin-top: 100%;
     
 }
@@ -20,9 +27,9 @@ footer {
 .image_footer{
     position: absolute;
     display: grid;
-    width: 108%;
-    /* height: 37%; */
-    margin-right: 100%;
+    width: 107.5%;
+    height: 30%;
+    /* margin-right: 110%; */
     margin-left: -30%;
     margin-bottom: 10%; 
     /* margin-top: -3%; */
@@ -50,7 +57,7 @@ footer {
     display: grid;
     position: absolute;
     margin-left: 0%;
-    margin-top: 40%;
+    margin-top: 33%;
 }
 
 footer #block-quisommesnous {
@@ -567,7 +574,7 @@ footer .wrapper-menu-footer {
     position: relative;
     margin-left: -10%;
     margin-right: 0%;
-    margin-bottom: -10%;
+    margin-bottom: 0%;
 }
 
 footer .wrapper-menu-footer {
