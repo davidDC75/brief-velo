@@ -25,10 +25,10 @@
 .row p {
 margin-left: 6%;
 }
-.item{
+.Item{
   padding: 15px;
 }
-#TrouverMonAccueil .item a {
+#TrouverMonAccueil .Item a {
   display: block;
     overflow: hidden;
     border-radius: 5px;
@@ -36,7 +36,7 @@ margin-left: 6%;
 }
 
 
-#TrouverMonAccueil .item a::before {
+#TrouverMonAccueil .Item a::before {
 content: "";
 display: block;
 position: absolute;
@@ -46,7 +46,7 @@ background: #000;
 background: rgba(0,0,0,.4);
 z-index: 2;
 }
-#TrouverMonAccueil .item a span {
+#TrouverMonAccueil .Item a span {
   position: absolute;
     z-index: 10;
     top: 50%;
@@ -59,6 +59,6 @@ z-index: 2;
     font-size: 1.125rem;
     text-transform: uppercase;
 }
-#TrouverMonAccueil .item a:hover {
+#TrouverMonAccueil .Item a:hover {
   filter: blur(5px);
 }
