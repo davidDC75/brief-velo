@@ -1,0 +1,42 @@
+@media (max-width:400px){
+    header .firstHeader{
+      display: none;
+    }
+
+.ip1, .ip3{
+    display: none;
+}
+
+
+.nonetel{
+    display: none;
+}
+.hh, .phh{
+    margin-left: 0%;
+    
+}
+.imgs{
+   padding: 0%;
+   margin: 0%;
+   width: 0%;
+}
+.img{
+    height: 30%;
+}
+.depart , .departe{
+    display: none;
+}
+header .lastHeader{
+    padding-bottom: 3%;
+}
+header .lastHeaderChild1 ,header .lastHeaderChild2{
+    margin-top: 5%;
+}
+
+
+header .lastHeaderChild2{
+    margin-right: 15%;
+    font-size: 25px;
+    color: green;
+}
+}

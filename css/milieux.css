@@ -64,15 +64,53 @@
     text-align: center;
     color: white;
     padding: 0 12% 0 5%;
-
+    
     bottom: 34%;
     position: relative;
 }
 .main1 .phh{
    text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 0 12% 0 5%;
    
     bottom: 35%;
     position: relative;
 }
+
+@media (max-width:1500px){
+    .main1 .hh{
+        text-align: center;
+        color:white;
+        padding: 0 8% 0 5%;
+        width: 90%;
+        bottom: 24%;
+        position: relative;
+    }
+    .main1 .phh{
+       text-align: center;
+        color: white;
+        padding: 0 8% 0 5%;
+       width: 90%;
+        bottom: 25%;
+        position: relative;
+    }
+    .phh .hh {
+       margin-left: 50%;
+    }
+    .ip{
+        width: 30%;
+        
+    }
+    .ipp{
+        display: none;
+    }
+    .tlts{
+        
+    }
+}
+
+
+
+
+
+
