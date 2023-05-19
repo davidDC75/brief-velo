@@ -597,6 +597,15 @@ div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixe
     color: white;
 }
 
+/* Les boutons responsive de navigation sont cachés */
+div#container-liste-etape div.etape-detail-container div#button-responsive-to-map {
+    display:none;
+}
+
+div#container-liste-etape div.etape-detail-container div#button-responsive-to-etape {
+    display:none;
+}
+
 /*************************************
 **************************************/
 /* Le div contenant la map */
@@ -636,20 +645,44 @@ div.map-marker:hover {
     border-color: #2f9f48;
 }
 
+/* Les boutons de navigation responsive sont caché de base */
+div#button-responsive-to-map {
+    display: none;
+}
+
+div#button-responsive-to-etape {
+    display: none;
+}
+
 /*****************************************
 *****************************************/
 /* Partie Responsive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     div#map {
         display: none;
+        width: 100vw;
+        height: 100vh;
     }
 
     div#left-side-container {
+        /* display: none; */
         width: 100vw;
+        height: 100vh;
     }
 
     div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed {
         width: 100vw;
+    }
+
+    div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire {
+        flex-flow: column nowrap;
+    }
+
+    div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire select {
+        height: 2.4rem;
+        width: 85%;
+        margin: 1% 0 3% 1%;
+        padding-left: 10px;
     }
 
     div#partie-haute-container div.planifier-itineraire div.formulaire-itineraire button {
@@ -657,4 +690,101 @@ div.map-marker:hover {
         font-size: 0.9rem;
     }
 
+    div.etape-content-container span.etape-dep-arr {
+        font-size: 1.2rem;
+    }
+
+    div.etape-content-container p {
+        display: none;
+    }
+
+    /* Le container en bas de la description d'une étape avec les liens */
+
+    div#partie-haute-container div.top-etape-flex-row-1 {
+        margin-top: 5vh;
+    }
+
+    div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed {
+        position: static;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 13vh;
+    }
+
+    div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-link {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 1001;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        width:100%;
+        height: 6vh;
+        background-color: white;
+    }
+
+    /* Le container contenant les boutons précédent et suivant */
+    div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-button {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1002;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed div.etape-detail-bottom-link a {
+        text-align: center;
+        width: 33.3%;
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: #07756d;
+    }
+
+    /* Les boutons responsive de navigation entre carte et étape */
+    div#button-responsive-to-map {
+        display: block;
+        position: fixed;
+        right: 2vw;
+        bottom: 7vh;
+        z-index: 1050;
+    }
+
+    div#button-responsive-to-map a{
+        display: block;
+        font-family: 'Poppins';
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: #F59C00;
+        color: white;
+        padding: 1vh 2vw;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+
+    div#button-responsive-to-etape {
+        display: none;
+        position: fixed;
+        right: 2vw;
+        bottom: 7vh;
+        z-index: 1051;
+    }
+
+    div#button-responsive-to-etape a {
+        display: block;
+        font-family: 'Poppins';
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: #F59C00;
+        color: white;
+        padding: 1vh 2vw;
+        text-decoration: none;
+        border-radius: 10px;
+    }
 }

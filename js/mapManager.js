@@ -1,9 +1,4 @@
-// Création carte
-var map = L.map('map').setView([50.8, 2.6], 9);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '<a href="./index.html">Eurovélo 5</a>'
-}).addTo(map);
+
 
 
 // Ces deux flags vont permettre de gérer le changement de couleur d'un tracé de la carte
@@ -14,11 +9,20 @@ let mouseoutToggle=true;
 // Permet de stocker le dernier tracé sélectionné
 let lastTrackClicked=null;
 
+// Les deux container principaux
 let containerLeftSide=document.getElementById('left-side-container');
+let containerMap=document.getElementById('map');
+
 // Partie haute contenant les liens du container de gauche
 let containerTopleft=document.getElementById('partie-haute-container');
 // Pour l'accueil de la partie gauche lorsqu'on arrive sur la page itinéraire
 let containerListeEtape=document.getElementById('container-liste-etape');
+
+// Les boutons qui permettent de switcher entre la carte et l'étape
+let buttonResponsiveToMap=document.getElementById('button-responsive-to-map');
+let buttonResponsiveToEtape=document.getElementById('button-responsive-to-etape');
+let etapeEnCours=null;
+
 // Le contenu html de la liste des étapes lorsqu'on arrive sur itineraire.html
 let listeEtape='';
 // L'url de strapi
@@ -27,7 +31,46 @@ let urlStrapi='http://85.169.220.243:5003';
 let etapes=null;
 // Nombre d'étapes
 let nbEtapes=0;
+// La largeur de l'écran
+let screenWidth=screen.width;
+// Flag pour savoir si on est en responsive ou pas
+let responsive=(screen.width<=400);
 
+let initialZoomLevel=responsive?8:9;
+
+
+// On écoute les boutons reponsives
+if (responsive) {
+    buttonResponsiveToMap.addEventListener('click', ()=> {
+        containerLeftSide.style.display='none';
+        containerMap.style.display='block';
+        buttonResponsiveToMap.style.display='none';
+        buttonResponsiveToEtape.style.display='block';
+        // Si on est dans l'affichage d'une étape
+        if (etapeEnCours!=null) {
+            // Nécessaire sur du responsive
+            map.invalidateSize();
+            AfficheEtapeSurMap(etapeEnCours);
+        } else {
+            map.invalidateSize();
+            map.setView([50.8, 2.6], initialZoomLevel);
+        }
+    });
+
+    buttonResponsiveToEtape.addEventListener('click', ()=> {
+        containerLeftSide.style.display='block';
+        containerMap.style.display='none';
+        buttonResponsiveToMap.style.display='block';
+        buttonResponsiveToEtape.style.display='none';
+    });
+}
+
+// Création carte
+var map = L.map('map').setView([50.8, 2.6], initialZoomLevel);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '<a href="./index.html">Eurovélo 5</a>'
+}).addTo(map);
 
 // Chargement des données
 fetch(urlStrapi+"/api/etapes?populate=*")
@@ -230,7 +273,7 @@ function retourneListeEtape() {
     // On injecte la liste des étapes dans le container
     containerListeEtape.innerHTML=listeEtape;
     // On remet la map à son origine
-    map.setView([50.8, 2.6],9);
+    map.setView([50.8, 2.6], initialZoomLevel);
     // On remet les flag à true pour gérer les mouseover et mouseout
     mouseoverToggle = true;
     mouseoutToggle = true;
@@ -238,6 +281,8 @@ function retourneListeEtape() {
         lastTrackClicked.setStyle({ color: '#f59c00' });
     }
     lastTrackClicked = null;
+
+    etapeEnCours=null;
 }
 
 function afficheEtape(etape) {
@@ -257,6 +302,8 @@ function afficheEtape(etape) {
 
     // Si le click vient de la liste de gauche, on affiche l'étape sur la map
     if (flag) AfficheEtapeSurMap(etapes[etape]);
+
+    etapeEnCours=flag?etapes[etape]:etape;
 
     if (index==0) {
         boutonPrecedent=false;
@@ -368,6 +415,9 @@ function afficheEtape(etape) {
     // On cache les boutons suivant ou précédent si besoin
     divBoutonPrecedent=document.getElementById('bouton-etape-precedente');
     divBoutonSuivant=document.getElementById('bouton-etape-suivante');
+
+    /* On affiche le bouton reponsive si nécessaire */
+    if (responsive) buttonResponsiveToMap.style.display='block';
 
     // On affiche ou pas les boutons précédent et suivant
     divBoutonPrecedent.style.visibility=(boutonPrecedent==false)?'hidden':'visible';
