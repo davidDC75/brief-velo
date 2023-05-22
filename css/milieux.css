@@ -64,20 +64,85 @@
     text-align: center;
     color: white;
     padding: 0 12% 0 5%;
-    
+    width: 80%;
     bottom: 34%;
     position: relative;
+    
 }
 .main1 .phh{
    text-align: center;
     color: rgb(255, 255, 255);
     padding: 0 12% 0 5%;
-   
+    width: 90%;
     bottom: 35%;
     position: relative;
 }
 
-@media (max-width:1500px){
+.ip{
+    margin-right: 0%;
+}
+
+.ip1{
+    margin-left:5%;
+}
+.globale{
+    height: 35vw;
+}
+.ip{
+    
+    height: 50vh;
+}
+
+.tlt{
+    position: relative;
+    bottom: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width:1500px){
     .main1 .hh{
         text-align: center;
         color:white;
@@ -105,7 +170,7 @@
         display: none;
     }
    
-}
+} */
 
 
 

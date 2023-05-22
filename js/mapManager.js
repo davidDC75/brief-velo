@@ -212,7 +212,7 @@ function afficheTopLeftContainer() {
         </div>
     </div>
     <div id="gpx-container">
-        <a href="./gpx/trace-complet.gpx">Télécharger le .gpx de la vélodyssée</a>
+        <a href="./gpx/trace-complet.gpx">Télécharger le .gpx du véloeuro 5</a>
     </div>`;
 }
 
@@ -294,6 +294,8 @@ function afficheEtape(etape) {
     fichierGpx=flag?etapes[etape].attributes.gpx.data[0].attributes.url:etape.attributes.gpx.data[0].attributes.url;
     distance=flag?etapes[etape].attributes.distance:etape.attributes.distance;
     difficulte=flag?etapes[etape].attributes.difficulte:etape.attributes.difficulte;
+    fichier_pdf=flag?etapes[etape].attributes.pdf_etape.data[0].attributes.url:etape.attributes.pdf_etape.data[0].attributes.url;
+    duree_etape=flag?etapes[etape].attributes.duree_etape:etape.attributes.duree_etape;
     index=flag?etapes[etape].index:etape.index;
     numeroEtape=index+1;
 
@@ -358,7 +360,7 @@ function afficheEtape(etape) {
                 </span>
                 <span class="material-symbols-outlined">settings_ethernet</span>
                 <span class="etape-temps">
-                 &nbsp;0 h 00 min&nbsp;
+                 &nbsp;${duree_etape}&nbsp;
                  </span>
                  ${difficulte}
             </div>
@@ -377,7 +379,7 @@ function afficheEtape(etape) {
                 <div class="etape-detail-bottom-link">
                     <a href="#"><span class="material-symbols-outlined">favorite_border</span>&nbsp;CARNET DE VOYAGE</a>
                     <a href="${urlStrapi}${fichierGpx}"><span class="material-symbols-outlined">file_download</span>&nbsp;TRACE GPX</a>
-                    <a href="#"><span class="material-symbols-outlined">print</span>&nbsp;FICHE PDF</a>
+                    <a href="${urlStrapi}${fichier_pdf}"><span class="material-symbols-outlined">print</span>&nbsp;FICHE PDF</a>
                 </div>
                 <div class="etape-detail-bottom-button">
                     <div class="container-bouton-precedent" id="bouton-etape-precedente">

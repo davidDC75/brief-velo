@@ -657,8 +657,12 @@ footer .wrapper-menu-footer .realisation span {
         
     }
     .bouton{
-        width: 40%;
+        width: 200px;
     }
+
+    /* .bouton-blanc {
+        margin-left: 200%;
+    } */
 
     .tout_le_footer{
         position: absolute;
@@ -670,9 +674,7 @@ footer .wrapper-menu-footer .realisation span {
     .image_footer{
         height: 30%;
     }
-    .bouton.bouton-blanc{
-        
-    }
+    
 
     footer .menu-footer nav > ul > li > a {
         line-height: 20px;
@@ -718,7 +720,18 @@ footer .wrapper-menu-footer .realisation span {
     } */
 
     .bouton.bouton-blanc{
-        margin-left: 10%;
+        margin-left: 200%;
+    }
+
+    .bouton.bouton-couleur-1{
+        margin-left: 100% ;
+    }
+    .bouton.bouton-border-noir{
+        margin-left: 140%;
+    }
+
+    .bouton.bouton-noir{
+        margin-left: 60%;
     }
   }
 
