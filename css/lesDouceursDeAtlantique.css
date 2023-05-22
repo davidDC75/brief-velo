@@ -115,7 +115,7 @@ div .text_effet a{
 .titre_des_cartes {
     position: absolute;
     display: grid;
-    margin-top: 25%;
+    margin-top: 23%;
     margin-left: 4%;
     text-align: center;
     font-family: "Mukta Mahee",sans-serif;
@@ -132,8 +132,8 @@ div .text_effet a{
 .sous_titre_text {
     position: absolute;
     display: grid;
-    margin-top: 27.5%;
-    margin-left: 4%;
+    margin-top: 26.5%;
+    margin-left: 3%;
     text-align: center;
     font-family: "Mukta Mahee",sans-serif;
     font-weight: 600;
@@ -184,9 +184,7 @@ div span{
 @media screen and (max-width: 1200px){
     .titre{
         text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        
         /* font-family: ; */
         font-weight: 300;
         font-size: 1.625rem;

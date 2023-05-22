@@ -653,7 +653,21 @@ footer .wrapper-menu-footer .realisation span {
         margin-top: 100%;
     } */
 
-   
+    .tout_le_footer{
+        position: absolute;
+        display: grid;
+        margin-bottom: 0%;
+        margin-top: 700%;
+    }
+
+    .image_footer{
+        height: 30%;
+    }
+
+    footer .menu-footer nav > ul > li > a {
+        line-height: 20px;
+    }
+
 
     .text_1{
         display: none;
@@ -667,16 +681,35 @@ footer .wrapper-menu-footer .realisation span {
         display: none;
     }
 
+    
+
     footer .wrapper-menu-footer {
-        position: absolute;
-        padding-left: 30px;
-    padding-right: 30px;
+        position: relative;
         /* margin-left: -10%; */
         margin-right: 0%;
-        margin-bottom: -100%;
+        
+        margin-bottom: -30%;
+        
+    }
+    footer .wrapper-menu-footer nav{
+        line-height: 30px;
     }
 
+    .wrapper-block-accueilvelo .block-accueil-velo h2{
+        text-align: center;
+        
 
+    }
+    .logo_velo{
+        display: none;
+    }
+    /* .bouton.full{
+        display: none;
+    } */
+
+    .bouton.bouton-blanc{
+        margin-left: 10%;
+    }
   }
 
 
