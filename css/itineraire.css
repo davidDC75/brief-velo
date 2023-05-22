@@ -454,6 +454,7 @@ div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    margin: 10px 0px;
 }
 
 div#container-liste-etape div.etape-detail-container div.etape-detail-flex-row span.etape-distance {
