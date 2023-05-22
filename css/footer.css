@@ -654,6 +654,7 @@ footer .wrapper-menu-footer .realisation span {
     } */
     .row{
         flex-flow: column nowrap;
+        /* margin-right: 100%; */
         
     }
     .bouton{
@@ -699,7 +700,6 @@ footer .wrapper-menu-footer .realisation span {
         position: relative;
         /* margin-left: -10%; */
         margin-right: 0%;
-        
         margin-bottom: -30%;
         
     }
@@ -715,10 +715,7 @@ footer .wrapper-menu-footer .realisation span {
     .logo_velo{
         display: none;
     }
-    /* .bouton.full{
-        display: none;
-    } */
-
+    
     .bouton.bouton-blanc{
         margin-left: 200%;
     }
