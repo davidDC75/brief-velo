@@ -42,6 +42,8 @@
     
 }
 
+
+
 /* .text_effet{
     transition: all .2s ease-out;
     bottom: 40px;
@@ -94,7 +96,7 @@ div .text_effet a{
     position: absolute;
     display: grid;
     margin-left: 12.5%;
-    margin-top: 15%;
+    margin-top: 0%;
     margin-bottom: 100%;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 300px 300px 300px;

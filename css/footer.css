@@ -652,6 +652,13 @@ footer .wrapper-menu-footer .realisation span {
         margin-bottom: -100px;
         margin-top: 100%;
     } */
+    .row{
+        flex-flow: column nowrap;
+        
+    }
+    .bouton{
+        width: 40%;
+    }
 
     .tout_le_footer{
         position: absolute;
@@ -662,6 +669,9 @@ footer .wrapper-menu-footer .realisation span {
 
     .image_footer{
         height: 30%;
+    }
+    .bouton.bouton-blanc{
+        
     }
 
     footer .menu-footer nav > ul > li > a {
