@@ -1,8 +1,14 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
 }
 
 .row h2 {
@@ -11,6 +17,7 @@
   width: 100%;
   font-size: 1.5em;
   font-weight: bold;
+  font-family: "Poppins";
 }
 
 #TrouverMonAccueil .logoVert {
@@ -59,13 +66,35 @@
 #TrouverMonAccueil .Item a:hover {
   filter: blur(5px);
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
+  #TrouverMonAccueil {
+    width: 100%;
+  }
+  #TrouverMonAccueil .logoVert {
+    display: block;
+    width: 22px;
+    height: 32px;
+    margin: auto;
+    position: relative;
+  }
   .row {
     display: flex;
     flex-direction: column;
-    margin-left: -15px;
-    margin-right: -15px;
   }
+  .row h2 {
+    margin-left: 0;
+    display: flex;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-align: center;
+    flex-direction: column;
+    font-family: "Poppins";
+  }
+  .row p {
+    margin-left: 0;
+    text-align: center;
+  }
+
   .Item {
     height: 15vh;
     padding: 15px;
