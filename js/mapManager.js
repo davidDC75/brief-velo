@@ -1,6 +1,3 @@
-
-
-
 // Ces deux flags vont permettre de gérer le changement de couleur d'un tracé de la carte
 // Lorsqu'on passe dessus
 // Il est désactivé quand on click sur un tracé ou une étape de la liste
