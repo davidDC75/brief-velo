@@ -1,40 +1,48 @@
 
 
 .conteneur{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
+    margin-top: 15%;
+    margin-bottom: 15%;
     /* margin-left:  -15px;
     margin-right: -15px; */
 }
 
 
 .titre{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* font-family: ; */
     font-weight: 300;
     font-size: 2.625rem;
-    margin-left: 30%;
-    margin-top: 5%;
+    /* margin-left: 30%;
+    margin-top: 10%; */
     
     
 }
 
 .sous_titre{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 110%;
     color: #585858;
     line-height: 1.5em;
     /* margin-top: 5%; */
-    /* margin-bottom: 20%; */
-    margin-left: 35%;
+    margin-bottom: 10%;
+    /* margin-left: 35%; */
     /* font-family: ; */
     font-weight: 500;
 }
 
 .box{
-    height: 400px; 
+    height: 300px; 
     
 }
+
+
 
 /* .text_effet{
     transition: all .2s ease-out;
@@ -66,8 +74,8 @@ div .text_effet a{
 } */
 
 .image_des_cartes{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     border-radius: 10px;
     margin-bottom: 100%;
 }
@@ -87,11 +95,11 @@ div .text_effet a{
     max-width: 1200px; */
     position: absolute;
     display: grid;
-    margin-left: 18%;
-    margin-top: 15%;
+    margin-left: 12.5%;
+    margin-top: 0%;
     margin-bottom: 100%;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 400px 400px 400px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
     gap: 30px;
     row-gap: 30px;
 }
@@ -109,7 +117,7 @@ div .text_effet a{
 .titre_des_cartes {
     position: absolute;
     display: grid;
-    margin-top: 25%;
+    margin-top: 23%;
     margin-left: 4%;
     text-align: center;
     font-family: "Mukta Mahee",sans-serif;
@@ -126,8 +134,8 @@ div .text_effet a{
 .sous_titre_text {
     position: absolute;
     display: grid;
-    margin-top: 27.5%;
-    margin-left: 4%;
+    margin-top: 26.5%;
+    margin-left: 3%;
     text-align: center;
     font-family: "Mukta Mahee",sans-serif;
     font-weight: 600;
@@ -136,7 +144,7 @@ div .text_effet a{
     line-height: 1em;
 }
 
-span{
+div span{
     position: absolute;
     text-decoration: solid;
     display: inline-block;
@@ -175,4 +183,55 @@ div span{
     opacity: .2;
 } */
 
+@media screen and (max-width: 1200px){
+    .titre{
+        text-align: center;
+        
+        /* font-family: ; */
+        font-weight: 300;
+        font-size: 1.625rem;
+        /* margin-left: 30%;
+        margin-top: 10%; */
+    }
 
+    .sous_titre{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 90%;
+        color: #585858;
+        line-height: 1.5em;
+        /* margin-top: 5%; */
+        margin-bottom: 10%;
+        /* margin-left: 35%; */
+        /* font-family: ; */
+        font-weight: 500;
+    }
+
+    .carte_la_douceur_de_atlantique{
+        margin-top: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titre_des_cartes{
+        text-align: center;
+        display: grid;
+        margin-top: 75%;
+        margin-left: 12%;
+        /* margin-bottom: 10%; */
+    }
+
+    .sous_titre_text{
+        display: none;
+    }
+
+    div span {
+        margin-left: 50%;
+    }
+
+    /* .box{
+        flex-direction: column;
+    } */
+}

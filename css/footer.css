@@ -24,15 +24,23 @@ footer {
     
 }
 
+/* footer #block-quisommesnous.lazy-bg-loaded{
+    background: url(/images/footer/image_footer.jpg) no-repeat center center;
+    display: grid;
+    font-size: 100%;
+
+} */
+
 .image_footer{
     position: absolute;
     display: grid;
-    width: 107.5%;
-    height: 30%;
-    /* margin-right: 110%; */
-    margin-left: -30%;
-    margin-bottom: 10%; 
-    /* margin-top: -3%; */
+    width: 100%;
+    height: 50%;
+    padding: 10px 0;
+    /* margin-right: 10%; */
+    /* margin-left: 0%; */
+    /* margin-bottom: 10%;  */
+    margin-top: 0%;
     
 }
 
@@ -225,8 +233,8 @@ a {
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+    /* margin-left: -15px;
+    margin-right: -15px; */
     list-style-type: none;
 }
 
@@ -463,8 +471,8 @@ footer #block-quisommesnous .bouton{
 
 footer .wrapper-block-accueilvelo {
     margin-right: 0%;
-    margin-left: -1%;
-    margin-bottom: -1%;
+    /* margin-left: -1%;
+    margin-bottom: -1%; */
     padding: 1.5%;
 
 }
@@ -572,7 +580,7 @@ footer .wrapper-block-accueilvelo {
 
 footer .wrapper-menu-footer {
     position: relative;
-    margin-left: -10%;
+    /* margin-left: -10%; */
     margin-right: 0%;
     margin-bottom: 0%;
 }
@@ -638,7 +646,81 @@ footer .wrapper-menu-footer .realisation span {
   }
 
 
+  @media screen and (max-width: 1200px){
+    /* footer{
+        display: grid;
+        margin-bottom: -100px;
+        margin-top: 100%;
+    } */
+    .row{
+        flex-flow: column nowrap;
+        
+    }
+    .bouton{
+        width: 40%;
+    }
 
+    .tout_le_footer{
+        position: absolute;
+        display: grid;
+        margin-bottom: 0%;
+        margin-top: 700%;
+    }
+
+    .image_footer{
+        height: 30%;
+    }
+    .bouton.bouton-blanc{
+        
+    }
+
+    footer .menu-footer nav > ul > li > a {
+        line-height: 20px;
+    }
+
+
+    .text_1{
+        display: none;
+    }
+
+    footer .menu-footer nav > ul > li > ul li a{
+        display: none;
+    }
+
+    footer #block-quisommesnous h3{
+        display: none;
+    }
+
+    
+
+    footer .wrapper-menu-footer {
+        position: relative;
+        /* margin-left: -10%; */
+        margin-right: 0%;
+        
+        margin-bottom: -30%;
+        
+    }
+    footer .wrapper-menu-footer nav{
+        line-height: 30px;
+    }
+
+    .wrapper-block-accueilvelo .block-accueil-velo h2{
+        text-align: center;
+        
+
+    }
+    .logo_velo{
+        display: none;
+    }
+    /* .bouton.full{
+        display: none;
+    } */
+
+    .bouton.bouton-blanc{
+        margin-left: 10%;
+    }
+  }
 
 
 
