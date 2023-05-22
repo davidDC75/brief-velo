@@ -3,6 +3,17 @@
     border: none;
 }
 
+header {
+    background-color: black;
+    background: none;
+    width: 100vw;
+    height: 130px;
+}
+
+nav {
+    width: 100vw;
+}
+
 div#itineraire-container {
     display: flex;
     flex-flow: row nowrap;
@@ -524,8 +535,9 @@ div#container-liste-etape div.etape-detail-container {
 div#container-liste-etape div.etape-detail-container div.etape-bottom-block-fixed {
     position: fixed;
     z-index: 1000;
-    top: calc(100vh - 130px - 13vh);
+    /* top: calc(100vh - 130px - 13vh); */
     left: 0;
+    bottom: 0;
     width: 50vw;
     height: 13vh;
 }
