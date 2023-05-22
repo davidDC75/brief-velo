@@ -30,6 +30,9 @@ body {
 .row p {
   margin-left: 6%;
 }
+img.Hide {
+  display: none;
+}
 .Item {
   padding: 15px;
 }
@@ -77,9 +80,13 @@ body {
     margin: auto;
     position: relative;
   }
+  img.Background {
+    display: none;
+  }
   .row {
     display: flex;
     flex-direction: column;
+    gap: 15px;
   }
   .row h2 {
     margin-left: 0;
@@ -115,11 +122,12 @@ body {
     height: 15vh;
     background: #000;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 2;
+    z-index: 0;
   }
-  #TrouverMonAccueil .Item a img {
+  #TrouverMonAccueil .Item a img.Hide {
     width: 100%;
-    height: 15vh;
+    height: 100%;
     object-fit: cover;
+    display: block;
   }
 }
