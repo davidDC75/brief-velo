@@ -14,6 +14,9 @@
  header{
     background-image: url(https://www.lavelodyssee.com/sites/velodyssee/files/styles/slide_1920x1080/public/medias/images/48858141243_f29f120125_6k%2520%25281%2529_1.webp?h=e5aec6c8&itok=xEd6aDOY);
     background-repeat: no-repeat;
+    background-size: cover;
+    
+   
 } 
 header .lastHeaderChild1 a{
     font-family:'Frutiger_bold' ;
@@ -184,7 +187,7 @@ header .logo{
     color: red;
   }
 header{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 .img{
@@ -193,4 +196,100 @@ header{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:400px){
+  header .firstHeader{
+    display: none;
+  }
+
+.ip1, .ip3{
+  display: none;
+}
+
+
+.nonetel{
+  display: none;
+}
+.hh, .phh{
+  margin-left: 0%;
+  
+}
+.imgs{
+ padding: 0%;
+ margin: 0%;
+ /* width: 0%; */
+}
+.img{
+  height: 30%;
+}
+.depart , .departe{
+  display: none;
+}
+header .lastHeader{
+  padding-bottom: 3%;
+  position: relative;
+}
+header .lastHeaderChild1 ,header .lastHeaderChild2{
+  margin-top: 5%;
+}
+
+
+header .lastHeaderChild2{
+  margin-right: 15%;
+  font-size: 25px;
+  color: green;
+}
+
+header{
+  background-image: url(https://www.lavelodyssee.com/sites/velodyssee/files/styles/slide_1920x1080/public/medias/images/48858141243_f29f120125_6k%2520%25281%2529_1.webp?h=e5aec6c8&itok=xEd6aDOY);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y:90px ;
+  width:50vh;
+  height: 65vh;
+  background-size: 470px 380px;
+  
+  
+} 
+header .title-h1 {
+
+  width: 150%;
+  font-size: 35px;
+  margin: 0%;
+}
+
+header .title-h2{
+  width: 150%;
+  font-size: 35px;
+  margin: 0%;
+}
+header .title-container{
+  position: absolute;
+  top: 20vh;
+  left: 40%;
+  transform: translateX(-50%);
+}
+header .submit{
+  font-size: 14px;
+  width: 119%;
+  margin-left: 15%;
+ 
+}
+
+}
 

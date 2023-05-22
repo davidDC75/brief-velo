@@ -30,9 +30,8 @@
     padding-bottom: 4%;
 }
 .main1 .iof{
-    margin-left:19% ;
+    /* margin-left:19%; */
     padding-top: 4%;
-   
 }
 .main1 .imgs{
     display: flex;
@@ -97,6 +96,54 @@
     position: relative;
     bottom: 200px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:400px){
+  
+
+
+    .main1 .globale{
+      
+      height: 60%;
+      background-image: none;
+      background-color: #f4f4f4;
+    }
+    .main1 p, .main1 h1{
+      color: black;
+    }
+   
+  .main1 .ip2{
+      /* margin-left: 50%; */
+  }
+  .iof h1{
+      font-size: 25px;
+      margin-left: 16%;
+    
+  }
+  .iof p{
+      color: #585858;
+      text-align: center;
+      margin-right: 19%;
+      margin-top: 6%;
+      width: 100%;
+  }
+
+}  
 
 
 

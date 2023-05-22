@@ -126,3 +126,26 @@ margin-right: 9px;
     margin-right: 17%;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:400px){
+
+    
+.main2 {
+    margin-top: 600%;
+}
+
+}
