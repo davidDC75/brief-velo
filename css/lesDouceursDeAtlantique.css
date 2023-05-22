@@ -1,38 +1,44 @@
 
 
 .conteneur{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
+    margin-top: 15%;
+    margin-bottom: 15%;
     /* margin-left:  -15px;
     margin-right: -15px; */
 }
 
 
 .titre{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* font-family: ; */
     font-weight: 300;
     font-size: 2.625rem;
-    margin-left: 30%;
-    margin-top: 5%;
+    /* margin-left: 30%;
+    margin-top: 10%; */
     
     
 }
 
 .sous_titre{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 110%;
     color: #585858;
     line-height: 1.5em;
     /* margin-top: 5%; */
-    /* margin-bottom: 20%; */
-    margin-left: 35%;
+    margin-bottom: 10%;
+    /* margin-left: 35%; */
     /* font-family: ; */
     font-weight: 500;
 }
 
 .box{
-    height: 400px; 
+    height: 300px; 
     
 }
 
@@ -66,8 +72,8 @@ div .text_effet a{
 } */
 
 .image_des_cartes{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     border-radius: 10px;
     margin-bottom: 100%;
 }
@@ -87,11 +93,11 @@ div .text_effet a{
     max-width: 1200px; */
     position: absolute;
     display: grid;
-    margin-left: 18%;
+    margin-left: 12.5%;
     margin-top: 15%;
     margin-bottom: 100%;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 400px 400px 400px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
     gap: 30px;
     row-gap: 30px;
 }
