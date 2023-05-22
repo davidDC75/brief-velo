@@ -24,14 +24,22 @@ footer {
     
 }
 
+/* footer #block-quisommesnous.lazy-bg-loaded{
+    background: url(/images/footer/image_footer.jpg) no-repeat center center;
+    display: grid;
+    font-size: 100%;
+
+} */
+
 .image_footer{
     position: absolute;
     display: grid;
-    width: 107.5%;
-    height: 30%;
-    /* margin-right: 110%; */
-    margin-left: -30%;
-    margin-bottom: 10%; 
+    width: 100%;
+    height: 50%;
+    padding: 10px 0;
+    /* margin-right: 10%; */
+    /* margin-left: 0%; */
+    /* margin-bottom: 10%;  */
     /* margin-top: -3%; */
     
 }
