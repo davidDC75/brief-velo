@@ -90,13 +90,13 @@ div .text_effet a{
     /* margin-bottom: 100%; */
 }
 
-/* .image_effet:hover{
+.image_effet:hover img{
    
-    filter: blur(6px);
+    filter: blur(5px);
     transform: scale(1);
-    transition: all .2s ease-out;
+    transition: all .1s ease-out;
     background: linear-gradient(to top,#000,rgba(0,0,0,0) 100%)
-} */
+}
 
 
 
