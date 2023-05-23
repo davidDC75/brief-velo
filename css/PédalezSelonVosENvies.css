@@ -12,7 +12,8 @@ body #PedalezSelonVosEnvies .VosEnvies {
 }
 #Pedalez {
   display: flex;
-  gap: 150px;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 #Pedalez .carte {
   border-radius: 5%;
@@ -27,6 +28,7 @@ body #PedalezSelonVosEnvies .VosEnvies {
   height: 500px;
   border-radius: 2px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
 }
 .TrouverParcours {
   display: inline-block;
