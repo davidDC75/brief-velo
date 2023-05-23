@@ -3,8 +3,14 @@
 .conteneur{
     display: grid;
     flex-wrap: wrap;
+<<<<<<< HEAD
+    margin-top: 30%;
+    
+    /* margin-bottom: 15%; */
+=======
     margin-top: 10%;
     margin-bottom: -22%;
+>>>>>>> 3260805a9906f5ccc1fce2102be87901c62c83da
     /* margin-left:  -15px;
     margin-right: -15px; */
 }
