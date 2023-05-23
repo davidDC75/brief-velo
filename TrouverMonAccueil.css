@@ -78,6 +78,7 @@ img.Hide {
     width: 22px;
     height: 32px;
     margin: auto;
+    margin-top: 30px;
     position: relative;
   }
   img.Background {
