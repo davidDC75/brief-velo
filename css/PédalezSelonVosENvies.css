@@ -59,17 +59,6 @@ body #PedalezSelonVosEnvies .VosEnvies {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-
-
-#PedalezSelonVosEnvies{
-margin-left: 25%;
-margin-top: 25%;
-}
-
-.teext{
-  position: relative;
-  bottom: 450px;
-}
 @media screen and (max-width: 400px) {
   #Pedalez .carte {
     display: none;
