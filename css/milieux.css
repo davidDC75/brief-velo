@@ -30,7 +30,7 @@
     padding-bottom: 4%;
 }
 .main1 .iof{
-    /* margin-left:19%; */
+    margin-left:19%; 
     padding-top: 4%;
 }
 .main1 .imgs{
@@ -96,7 +96,9 @@
     position: relative;
     bottom: 200px;
 }
-
+.email::placeholder{
+    color: white;
+}
 
 
 
@@ -119,7 +121,7 @@
 
     .main1 .globale{
       
-      height: 60%;
+      height: 0%;
       background-image: none;
       background-color: #f4f4f4;
     }
@@ -128,11 +130,16 @@
     }
    
   .main1 .ip2{
-      /* margin-left: 50%; */
+     /* margin-left: 50%; */
   }
   .iof h1{
-      font-size: 25px;
-      margin-left: 16%;
+    margin-top: 15%;
+    margin-bottom:10%;
+    margin-right: 30%;
+    width: 100%;
+      font-size: 30px;
+      text-align: center;
+      
     
   }
   .iof p{
@@ -140,8 +147,54 @@
       text-align: center;
       margin-right: 19%;
       margin-top: 6%;
+      margin-right: 10%;
+      padding-right: 40px;
+      padding-left: 40px;
       width: 100%;
+      font-weight: 600;
+      line-height: 1.7rem;
+      align-items: center;
   }
+.main1 .iof{
+    margin-left: 0%;
+}
+.imgs .ip .img{
+    margin-left: 5%;
+    width: 90vw;
+    height: 20vh;
+
+}
+.imgs .ip .hh{
+    bottom: 80px;
+    width: 100%;
+    margin: 4%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.imgs .ip .phh{
+    display: none;
+}
+
+.tlt .tlts{
+    color: black;
+    padding: 9px 15px ;
+    border: rgb(0, 0, 0) 2px solid;
+    font-weight: 600;
+    margin-left: 2%;
+   
+}
+.tlt{
+    bottom: 10px;
+}
+
+ 
+
+
+.ip{
+    
+    height: 30vh;
+}
+
 
 }  
 

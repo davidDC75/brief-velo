@@ -281,7 +281,7 @@ header .title-h2{
 header .title-container{
   position: absolute;
   top: 20vh;
-  left: 40%;
+  left: 35%;
   transform: translateX(-50%);
 }
 header .submit{
@@ -290,6 +290,8 @@ header .submit{
   margin-left: 15%;
  
 }
-
+.calcule .submit2{
+  margin-left: 17%;
+}
 }
 
