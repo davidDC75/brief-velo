@@ -23,7 +23,7 @@ margin-left: 33%;
 
 .main2 .bloc{
     padding: 1% 1% 1% 1%;
-    background-color:#f0f0f0 ;
+    background-color:#f0f0f0;
     width: 17.5%;
 }
 .main2 .haut{
@@ -147,5 +147,64 @@ margin-right: 9px;
 .main2 {
     margin-top: 5%;
 }
+
+.main2 .ldap{
+    font-size: 30px;
+    margin-left: 0%;
+   text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 9%;
+}
+
+.main2 .lv,.main2 .np{
+font-size: 16px;
+margin-left: 5%;
+margin-right: 5%;
+text-align: center;
+width: 90%;
+ margin-bottom: 3%;
+}
+.main2 .np{
+   margin-bottom: 10%;
+}
+.main2 .blocG{
+    flex-direction: column;
+    width: 100%;
+}
+.main2 .blocG .bloc{
+  width: 80%;
+}
+.main2 .blocG .bloc1{
+margin-right: 5%;
+margin-left:10% ;
+margin-bottom: 10%;
+}
+.main2 .blocG .bloc2{
+margin-right: 5%;
+margin-left:10% ;
+margin-bottom: 10%;
+padding-bottom: 50px;
+}
+.main2 .blocG .bloc .pbe{
+    line-height: 1.3rem;
+    margin-bottom: 3%;
+
+}
+
+.main2 .blocG .bloc3{
+margin-right: 5%;
+margin-left:10% ;
+margin-bottom: 10%;
+}
+.main2 .blocG .bloc{
+    padding: 15px;
+}
+.main2 .blocG .bloc p{
+   margin-bottom: 3%;
+}
+
 
 }
