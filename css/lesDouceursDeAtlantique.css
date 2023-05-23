@@ -3,11 +3,20 @@
 .conteneur{
     display: grid;
     flex-wrap: wrap;
+<<<<<<< HEAD
     margin-top: 30%;
     
     /* margin-bottom: 15%; */
+=======
+    margin-top: 10%;
+    margin-bottom: -22%;
+>>>>>>> 3260805a9906f5ccc1fce2102be87901c62c83da
     /* margin-left:  -15px;
     margin-right: -15px; */
+}
+
+.toute_les_cartes{
+    justify-content: space-between;
 }
 
 
@@ -32,7 +41,7 @@
     color: #585858;
     line-height: 1.5em;
     /* margin-top: 5%; */
-    margin-bottom: 10%;
+    margin-bottom: 8% ;
     /* margin-left: 35%; */
     /* font-family: ; */
     font-weight: 500;
@@ -78,20 +87,22 @@ div .text_effet a{
     height: 300px;
     width: 300px;
     border-radius: 10px;
-    margin-bottom: 100%;
+    /* margin-bottom: 100%; */
 }
 
-.image_effet:hover{
+/* .image_effet:hover{
    
     filter: blur(6px);
     transform: scale(1);
     transition: all .2s ease-out;
     background: linear-gradient(to top,#000,rgba(0,0,0,0) 100%)
-}
+} */
 
 
 
 .carte_la_douceur_de_atlantique{
+    align-items: center;
+    justify-content: center;
     /* width: 100%;
     max-width: 1200px; */
     position: absolute;
@@ -146,6 +157,9 @@ div .text_effet a{
 }
 
 div span{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     position: absolute;
     text-decoration: solid;
     display: inline-block;

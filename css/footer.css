@@ -1,7 +1,7 @@
 /* FOOTER */
 
 html body {
-    font-family: "Mukta Mahee" 45 light;
+    /* font-family: "Mukta Mahee" 45 light; */
     font-weight: 400;
 }
 
@@ -39,8 +39,8 @@ footer {
     padding: 10px 0;
     /* margin-right: 10%; */
     /* margin-left: 0%; */
-    /* margin-bottom: 10%;  */
-    margin-top: 0%;
+    /* margin-bottom: 100%;  */
+    /* margin-top: 0%; */
     
 }
 
@@ -654,6 +654,9 @@ footer .wrapper-menu-footer .realisation span {
         margin-bottom: -100px;
         margin-top: 100%;
     } */
+
+    
+
     .row{
         flex-flow: column nowrap;
         /* margin-right: 100%; */
