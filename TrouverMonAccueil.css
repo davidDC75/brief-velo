@@ -53,7 +53,7 @@ img.Hide {
   background: rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
-#TrouverMonAccueil .Item a span {
+#TrouverMonAccueil .Item a span.Hote {
   position: absolute;
   z-index: 10;
   top: 50%;
