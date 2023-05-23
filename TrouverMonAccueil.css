@@ -6,13 +6,13 @@
 body {
   margin: 0;
 }
-.row {
+.row1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.row h2 {
+.row1 h2 {
   margin-left: 10%;
   display: block;
   width: 100%;
@@ -31,7 +31,7 @@ body {
   /* margin-left: %; */
   margin-top: 2%;
 }
-.row p {
+.row1 p {
   margin-left: 6%;
 }
 img.Hide {
@@ -92,12 +92,12 @@ img.Hide {
   img.Background {
     display: none;
   }
-  .row {
+  .row1 {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
-  .row h2 {
+  .row1 h2 {
     margin-left: 0;
     display: flex;
     font-size: 1.75rem;
@@ -106,7 +106,7 @@ img.Hide {
     flex-direction: column;
     font-family: "Poppins";
   }
-  .row p {
+  .row1 p {
     margin-left: 0;
     text-align: center;
   }
