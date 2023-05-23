@@ -105,6 +105,7 @@ div .text_effet a{
   height: auto;
   margin-top: 0.3%;
   margin-left: 26%;
+  z-index: 1000;
 }
 
 .titre_des_cartes {
@@ -118,6 +119,7 @@ div .text_effet a{
   color: white;
   font-size: 1.2rem;
   line-height: 1em;
+  z-index: 1000;
 }
 .texte_des_cartes {
   color: white;
@@ -134,6 +136,7 @@ div .text_effet a{
   color: white;
   font-size: 90%;
   line-height: 1em;
+  z-index: 1000;
 }
 
 .etiquette {
