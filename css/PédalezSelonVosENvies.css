@@ -10,6 +10,13 @@ body #PedalezSelonVosEnvies .VosEnvies {
   border: none;
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
 }
+#Pedalez {
+  display: flex;
+  gap: 150px;
+}
+#Pedalez .carte {
+  border-radius: 5%;
+}
 #PedalezSelonVosEnvies {
   background: #007c74;
   display: block;
@@ -17,6 +24,7 @@ body #PedalezSelonVosEnvies .VosEnvies {
   padding: 30px;
   margin: 40px 0 0 0;
   width: 330px;
+  height: 500px;
   border-radius: 2px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
@@ -50,4 +58,12 @@ body #PedalezSelonVosEnvies .VosEnvies {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+@media screen and (max-width: 400px) {
+  #Pedalez .carte {
+    display: none;
+  }
+  #PedalezSelonVosEnvies {
+    margin: 20px;
+  }
 }
