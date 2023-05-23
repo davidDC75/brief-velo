@@ -1,52 +1,44 @@
-
-
-.conteneur{
-    display: grid;
-    flex-wrap: wrap;
-    margin-top: 10%;
-    margin-bottom: -22%;
-    /* margin-left:  -15px;
+.conteneur {
+  display: grid;
+  flex-wrap: wrap;
+  margin-top: 10%;
+  margin-bottom: -22%;
+  /* margin-left:  -15px;
     margin-right: -15px; */
 }
 
-.toute_les_cartes{
-    justify-content: space-between;
+.toute_les_cartes {
+  justify-content: space-between;
 }
 
-
-.titre{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* font-family: ; */
-    font-weight: 300;
-    font-size: 2.625rem;
-    /* margin-left: 30%;
+.titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-family: ; */
+  font-weight: 300;
+  font-size: 2.625rem;
+  /* margin-left: 30%;
     margin-top: 10%; */
-    
-    
 }
 
-.sous_titre{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 110%;
-    color: #585858;
-    line-height: 1.5em;
-    /* margin-top: 5%; */
-    margin-bottom: 8% ;
-    /* margin-left: 35%; */
-    /* font-family: ; */
-    font-weight: 500;
+.sous_titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 110%;
+  color: #585858;
+  line-height: 1.5em;
+  /* margin-top: 5%; */
+  margin-bottom: 8%;
+  /* margin-left: 35%; */
+  /* font-family: ; */
+  font-weight: 500;
 }
 
-.box{
-    height: 300px; 
-    
+.box {
+  height: 300px;
 }
-
-
 
 /* .text_effet{
     transition: all .2s ease-out;
@@ -77,164 +69,145 @@ div .text_effet a{
     text-decoration: none;
 } */
 
-.image_des_cartes{
-    height: 300px;
-    width: 300px;
-    border-radius: 10px;
-    /* margin-bottom: 100%; */
+.image_des_cartes {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  /* margin-bottom: 100%; */
 }
 
-.image_effet:hover img{
-   
-    filter: blur(5px);
-    transform: scale(1);
-    transition: all .1s ease-out;
-    background: linear-gradient(to top,#000,rgba(0,0,0,0) 100%)
+.image_effet:hover img {
+  filter: blur(5px);
+  transform: scale(1);
+  transition: all 0.1s ease-out;
+  background: linear-gradient(to top, #000, rgba(0, 0, 0, 0) 100%);
 }
 
-
-
-.carte_la_douceur_de_atlantique{
-    align-items: center;
-    justify-content: center;
-    /* width: 100%;
+.carte_la_douceur_de_atlantique {
+  align-items: center;
+  justify-content: center;
+  /* width: 100%;
     max-width: 1200px; */
-    position: absolute;
-    display: grid;
-    margin-left: 12.5%;
-    margin-top: 0%;
-    /* margin-bottom: 100%; */
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 300px 300px 300px;
-    gap: 30px;
-    row-gap: 30px;
+  position: absolute;
+  display: grid;
+  margin-left: 12.5%;
+  margin-top: 0%;
+  /* margin-bottom: 100%; */
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px 300px;
+  gap: 30px;
+  row-gap: 30px;
 }
 
-
-.logo_coeur{
-    position: absolute;
-    width: 13%;
-    height: auto;
-    margin-top: 0.3%;
-    margin-left: 26%;
-
+.logo_coeur {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  margin-top: 0.3%;
+  margin-left: 26%;
 }
 
 .titre_des_cartes {
-    position: absolute;
-    display: grid;
-    margin-top: 23%;
-    margin-left: 4%;
-    text-align: center;
-    font-family: "Mukta Mahee",sans-serif;
-    font-weight: 600;
-    color: white;
-    font-size: 1.2rem;
-    line-height: 1em;
-    
+  position: absolute;
+  display: grid;
+  margin-top: 23%;
+  margin-left: 4%;
+  text-align: center;
+  font-family: "Mukta Mahee", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1em;
 }
-.texte_des_cartes{
-    color: white;
-    
+.texte_des_cartes {
+  color: white;
 }
-
 
 .sous_titre_text {
-    position: absolute;
-    display: grid;
-    margin-top: 26.5%;
-    margin-left: 3%;
+  position: absolute;
+  display: grid;
+  margin-top: 26.5%;
+  margin-left: 3%;
+  text-align: center;
+  font-family: "Mukta Mahee", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 90%;
+  line-height: 1em;
+}
+
+.etiquette {
+  position: absolute;
+  text-decoration: solid;
+  display: inline-block;
+  text-align: center;
+  display: grid;
+  margin-top: 1%;
+  margin-left: 16%;
+  padding: 0.5%;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  font-weight: 600;
+  max-width: 70%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+  z-index: 6;
+}
+
+.etiquette {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1200px) {
+  .titre {
     text-align: center;
-    font-family: "Mukta Mahee",sans-serif;
-    font-weight: 600;
-    color: white;
-    font-size: 90%;
-    line-height: 1em;
-}
 
-.etiquette{
-    
-    position: absolute;
-    text-decoration: solid;
-    display: inline-block;
-    text-align: center;
-    display: grid;
-    margin-top: 1%;
-    margin-left: 16%;
-    padding: 0.5%;
-    background-color: orange;
-    color: white;
-    font-weight: bold;
-    font-weight: 600;
-    max-width: 70%;
-    transform: translate(-50%,0);
-    overflow: hidden;
-    z-index: 6;
-
-}
-
-.etiquette{
-    display: inline-block;
-}
-
-
-
-
-
-
-@media screen and (max-width: 1200px){
-    .titre{
-        text-align: center;
-        
-        /* font-family: ; */
-        font-weight: 300;
-        font-size: 1.625rem;
-        /* margin-left: 30%;
+    /* font-family: ; */
+    font-weight: 300;
+    font-size: 1.625rem;
+    /* margin-left: 30%;
         margin-top: 10%; */
-    }
+  }
 
-    .sous_titre{
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 90%;
-        color: #585858;
-        line-height: 1.5em;
-        /* margin-top: 5%; */
-        margin-bottom: 10%;
-        /* margin-left: 35%; */
-        /* font-family: ; */
-        font-weight: 500;
-    }
+  .sous_titre {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90%;
+    color: #585858;
+    line-height: 1.5em;
+    /* margin-top: 5%; */
+    margin-bottom: 10%;
+    /* margin-left: 35%; */
+    /* font-family: ; */
+    font-weight: 500;
+  }
 
-    .carte_la_douceur_de_atlantique{
-        margin-top: 0%;
-        display: flex;
-        flex-direction: column;
-    }
+  .carte_la_douceur_de_atlantique {
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .titre_des_cartes{
-        text-align: center;
-        display: grid;
-        margin-top: 75%;
-        margin-left: 12%;
-        /* margin-bottom: 10%; */
-    }
+  .titre_des_cartes {
+    text-align: center;
+    display: grid;
+    margin-top: 75%;
+    margin-left: 12%;
+    /* margin-bottom: 10%; */
+  }
 
-    .sous_titre_text{
-        display: none;
-    }
+  .sous_titre_text {
+    display: none;
+  }
 
-    div span {
-        margin-left: 50%;
-    }
+  .etiquette {
+    display: none;
+  }
 
-    .etiquette{
-        display: none;
-    }
-
-    /* .box{
+  /* .box{
         flex-direction: column;
     } */
 }

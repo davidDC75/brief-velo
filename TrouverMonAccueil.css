@@ -76,6 +76,10 @@ img.Hide {
 @media screen and (max-width: 400px) {
   #TrouverMonAccueil {
     width: 100%;
+    margin-left: 30px;
+  }
+  #TitreMonAccueil .Titre {
+    text-align: center;
   }
   #TrouverMonAccueil .logoVert {
     display: block;

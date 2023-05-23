@@ -66,6 +66,6 @@ body #PedalezSelonVosEnvies .VosEnvies {
     display: none;
   }
   #PedalezSelonVosEnvies {
-    margin: 20px;
+    margin-left: 100px;
   }
 }
