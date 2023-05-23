@@ -9,7 +9,9 @@
     margin-right: -15px; */
 }
 
-
+.toute_les_cartes{
+    justify-content: space-between;
+}
 
 
 .titre{
@@ -93,6 +95,8 @@ div .text_effet a{
 
 
 .carte_la_douceur_de_atlantique{
+    align-items: center;
+    justify-content: center;
     /* width: 100%;
     max-width: 1200px; */
     position: absolute;
