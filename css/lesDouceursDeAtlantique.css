@@ -3,14 +3,8 @@
 .conteneur{
     display: grid;
     flex-wrap: wrap;
-<<<<<<< HEAD
-    margin-top: 30%;
-    
-    /* margin-bottom: 15%; */
-=======
     margin-top: 10%;
     margin-bottom: -22%;
->>>>>>> 3260805a9906f5ccc1fce2102be87901c62c83da
     /* margin-left:  -15px;
     margin-right: -15px; */
 }
@@ -137,9 +131,11 @@ div .text_effet a{
     color: white;
     font-size: 1.2rem;
     line-height: 1em;
+    
 }
 .texte_des_cartes{
     color: white;
+    
 }
 
 
@@ -156,10 +152,8 @@ div .text_effet a{
     line-height: 1em;
 }
 
-div span{
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+.etiquette{
+    
     position: absolute;
     text-decoration: solid;
     display: inline-block;
@@ -179,24 +173,14 @@ div span{
 
 }
 
-div span{
+.etiquette{
     display: inline-block;
 }
 
 
 
 
-/* .image_effet{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: linear-gradient(to top,#000,rgba(0,0,0,0) 100%);
-    opacity: .2;
-} */
+
 
 @media screen and (max-width: 1200px){
     .titre{
