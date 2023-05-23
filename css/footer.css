@@ -401,7 +401,7 @@ footer #block-quisommesnous .bouton{
 
 .col-md-4 {
     flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    /* max-width: 33.333333%; */
 }
 
 [class*="col-"] {
@@ -413,7 +413,7 @@ footer #block-quisommesnous .bouton{
 
 .col-md-4 {
     flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    /* max-width: 33.333333%; */
 }
 
 [class*="col-"] {
@@ -425,7 +425,7 @@ footer #block-quisommesnous .bouton{
 
 .col-md-4 {
     flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    /* max-width: 33.333333%; */
 }
 
 [class*="col-"] {
@@ -683,7 +683,7 @@ footer .wrapper-menu-footer .realisation span {
     
 
     footer .menu-footer nav > ul > li > a {
-        line-height: 20px;
+        line-height: 30px;
     }
 
 

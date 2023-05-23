@@ -97,7 +97,7 @@ div .text_effet a{
     display: grid;
     margin-left: 12.5%;
     margin-top: 0%;
-    margin-bottom: 100%;
+    /* margin-bottom: 100%; */
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 300px 300px 300px;
     gap: 30px;
