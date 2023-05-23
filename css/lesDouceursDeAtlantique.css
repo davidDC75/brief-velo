@@ -35,7 +35,7 @@
     color: #585858;
     line-height: 1.5em;
     /* margin-top: 5%; */
-    margin-bottom: 10%;
+    margin-bottom: 8% ;
     /* margin-left: 35%; */
     /* font-family: ; */
     font-weight: 500;
@@ -84,13 +84,13 @@ div .text_effet a{
     /* margin-bottom: 100%; */
 }
 
-.image_effet:hover{
+/* .image_effet:hover{
    
     filter: blur(6px);
     transform: scale(1);
     transition: all .2s ease-out;
     background: linear-gradient(to top,#000,rgba(0,0,0,0) 100%)
-}
+} */
 
 
 
