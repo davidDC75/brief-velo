@@ -65,7 +65,7 @@ body #PedalezSelonVosEnvies .VosEnvies {
   #Pedalez .carte {
     display: none;
   }
-  #PedalezSelonVosEnvies {
+  /* #PedalezSelonVosEnvies {
     margin-left: 100px;
-  }
+  } */
 }
